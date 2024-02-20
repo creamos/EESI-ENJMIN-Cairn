@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 #Ignore all .meta file
 *.meta
+
+#Ignore all .idea
+.idea*
