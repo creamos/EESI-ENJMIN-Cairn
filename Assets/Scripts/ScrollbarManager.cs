@@ -4,16 +4,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonsSpecialBehaviour : MonoBehaviour
+public class ScrollbarManager : MonoBehaviour
 {
     private Scrollbar currentScrollbar;
-    public GameObject[] stonesUI;
-    public GameObject stonePannel;
+
     // Start is called before the first frame update
     void Start()
     {
-        stonesUI = GameObject.FindGameObjectsWithTag("UIStone");
-        stonePannel.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -35,11 +33,4 @@ public class ButtonsSpecialBehaviour : MonoBehaviour
         _scrollingObj.transform.localPosition = new Vector3(_x,_objPosY,_z);
     }
 
-    public void UnableOutline ()
-    {
-        foreach (GameObject outline in stonesUI) 
-        {
-            outline.GetComponent<Outline>().enabled = false;
-        }
-    }
 }
