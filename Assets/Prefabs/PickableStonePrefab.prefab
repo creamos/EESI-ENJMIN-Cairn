@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3514618859013859352}
   m_Layer: 5
   m_Name: PickableStonePrefab
-  m_TagString: UIStone
+  m_TagString: PickableStone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,7 +13,7 @@ public class StoneTextBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stonesUI = GameObject.FindGameObjectsWithTag("UIStone");
+        stonesUI = GameObject.FindGameObjectsWithTag("PickableStone");
     }
 
     // Update is called once per frame
