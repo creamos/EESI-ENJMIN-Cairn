@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class FingerScrollManager : MonoBehaviour
+public class FingerScrollManager : MonoBehaviour, IPointerDownHandler
 {
-    public Image scrollArea;
     public Scrollbar scrollbar;
 
     // Start is called before the first frame update
@@ -18,7 +18,15 @@ public class FingerScrollManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.GetMouseButton(0));
+
+        
     }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log(this.gameObject.name + " Was Clicked.");
+    }
+
+
 
 }
