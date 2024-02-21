@@ -30,6 +30,8 @@ public class Cairn : MonoBehaviour
 
     public int floorWidth = 9;
 
+    // Polish code du cern pour reorganiser cailloux d'un etage avec les gros au milieu ou aleatoirement
+
     private void FitRockInPlace( Rock rock , int floor, int Pos){
         for (int i =0; i<rock.rockWidth ;i++){
             spaces[floorWidth * floor +Pos+i]= true;
@@ -84,6 +86,12 @@ public class Cairn : MonoBehaviour
         }
     }
 
+    private void FillCairnWithOrderedRockListFromIndex(int idx){ 
+        for(int i=idx;i<rocksInCairn.Count;i++){
+            FindRockPlace(rocksInCairn[i]);
+        }
+    }
+
     private void AddFloor(){
         for (int i=0;i<floorWidth;i++){
             spaces.Add(false);
@@ -98,12 +106,6 @@ public class Cairn : MonoBehaviour
         AddFloor();
     }
 
-    public void ResetCairn(){
-        InitializeCairnSpace();
-        ResetRockCoords();
-        FillCairnWithOrderedRockList();
-    }
-
     private void ResetCairnSpace(){
         for( int i=0; i<  spaces.Count; i++ ){ // vide le cairn
                 spaces[i]= false;
@@ -112,6 +114,57 @@ public class Cairn : MonoBehaviour
 
     private void ResetRockCoords(){ // efface les coordonées des rochers 
         rocksInCairnCoords = new List<int[]>();
+    }
+
+    private void RemoveRocksfromCairnFromIndex(int idx){
+         for(int i=idx;i<rocksInCairn.Count;i++){
+            UnfitRockInPlace( rocksInCairn[i] , rocksInCairnCoords[i][0], rocksInCairnCoords[i][1]);
+            rocksInCairnCoords.RemoveAt(idx);
+        }
+    }
+
+    private void RemoveLastFloor(){
+        for(int i=0;i<floorWidth;i++){
+            spaces.RemoveAt(spaces.Count);
+        }
+        floorNb--;
+    }
+
+    private void RemoveEmptyFloors(){
+        while (floorNb>0){
+            bool emptyLastFloor=true;
+            for (int j=0;j<floorWidth;j++){
+                if(spaces[floorWidth*floorNb-(j+1)]==true){
+                    emptyLastFloor=false;
+                    break;
+                }
+            }
+            if(emptyLastFloor){
+                RemoveLastFloor();
+            }
+            else{
+                break;
+            }
+        }
+    }
+
+    public void ResetCairn(){
+        InitializeCairnSpace();
+        ResetRockCoords();
+        FillCairnWithOrderedRockList();
+    }
+
+    public void AddRock(Rock rock){
+        rocksInCairn.Add(rock);
+        FindRockPlace(rock);
+    }
+
+    public void RemoveRandomRock(){
+        int idxRockToRemove = Random.Range(0,rocksInCairn.Count);
+        RemoveRocksfromCairnFromIndex(idxRockToRemove);
+        rocksInCairn.RemoveAt(idxRockToRemove); 
+        FillCairnWithOrderedRockListFromIndex(idxRockToRemove);  
+        RemoveEmptyFloors();
     }
 
     public bool HasRock(int floor, int location){
@@ -140,18 +193,5 @@ public class Cairn : MonoBehaviour
 
     public int GetFloorNumber(){
         return floorNb;
-    }
-
-    public void RemoveRandomRock(){
-        int idxRockToRemove = Random.Range(0,rocksInCairn.Count);
-        Rock r = rocksInCairn[idxRockToRemove];
-        UnfitRockInPlace( r , rocksInCairnCoords[idxRockToRemove][0], rocksInCairnCoords[idxRockToRemove][1]);
-        rocksInCairn.RemoveAt(idxRockToRemove);
-        rocksInCairnCoords.RemoveAt(idxRockToRemove);
-    }
-
-    public void AddRock(Rock rock){
-        rocksInCairn.Add(rock);
-        FindRockPlace(rock);
     }
 }
