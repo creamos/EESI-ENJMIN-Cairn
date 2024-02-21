@@ -11,5 +11,5 @@ public class Rock : ScriptableObject
     public AudioClip RockAudioCLip; //Son de rock unique
     
     // Ajouter l'image, et ce dont a besoin viktor pour les anim
-    public Animator animationControl;
+    public AnimationClip RockAnimClip;
 }
