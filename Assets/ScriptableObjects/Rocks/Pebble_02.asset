@@ -17,3 +17,7 @@ MonoBehaviour:
   rockWidth: 1
   RockAudioCLip: {fileID: 8300000, guid: a90de1eec0cb10e40aa5fd41ea5fdc9d, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 08291c1ba5de10644898fed44df8726d, type: 2}
+  FrameList:
+  - {fileID: 2014340180, guid: 741baa61002c31a4da20d28a6fc744fa, type: 3}
+  - {fileID: -267434352, guid: 741baa61002c31a4da20d28a6fc744fa, type: 3}
+  - {fileID: 1652241654, guid: 741baa61002c31a4da20d28a6fc744fa, type: 3}
