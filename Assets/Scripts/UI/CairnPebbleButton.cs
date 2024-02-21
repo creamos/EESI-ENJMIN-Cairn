@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(FauxFix))]
 [RequireComponent(typeof(Button))]
-[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
 public class CairnPebbleButton : MonoBehaviour
 {
@@ -14,9 +14,8 @@ public class CairnPebbleButton : MonoBehaviour
     [field:SerializeField]
     public Rock Data { get; private set; }
     
+    private FauxFix fauxFix;
     private Button button;
-    private Animator animator;
-    private AnimatorOverrideController animatorOverride;
     private AudioSource audioSource;
 
     public UnityEvent<Rock> OnTriggered;
@@ -31,9 +30,8 @@ public class CairnPebbleButton : MonoBehaviour
 
     private void OnEnable()
     {
+        fauxFix ??= GetComponent<FauxFix>();
         button ??= GetComponent<Button>();
-        animator ??= GetComponent<Animator>();
-        animatorOverride ??= animator.runtimeAnimatorController as AnimatorOverrideController;
         audioSource ??= GetComponent<AudioSource>();
 
         if (button)
@@ -59,12 +57,14 @@ public class CairnPebbleButton : MonoBehaviour
     public void Initialize(Rock data, bool activeState = false)
     {
         Data = data;
-        transform.localScale = new Vector3(data.rockWidth,1,1);
-        
+        RectTransform rectTr = transform as RectTransform;
+        rectTr.sizeDelta = new Vector2(data.rockWidth * 107, rectTr.rect.height);
+        fauxFix?.Initialize(data);
         IsActivated = activeState;
-        animatorOverride["Pebble_Standard"] = Data.RockAnimClip;
-        animator.SetBool(IsActivePropertyID, IsActivated);
         audioSource.clip = Data.RockAudioCLip;
+        
+        if (fauxFix) fauxFix.IsPlaying = activeState;
+        if (activeState) audioSource.Play();
 
         OnPebbleSpawned?.Raise(Data);
     }
@@ -82,17 +82,17 @@ public class CairnPebbleButton : MonoBehaviour
 
     private void Activate()
     {
+        if (fauxFix) fauxFix.IsPlaying = true;
+        audioSource.Play();
         OnActivated?.Invoke(Data);
         OnActivatedEvent?.Raise(Data);
-        animator.SetBool(IsActivePropertyID, true);
-        audioSource.Play();
     }
 
     private void Deactivate()
     {
+        if (fauxFix) fauxFix.IsPlaying = false;
+        audioSource.Stop();
         OnDeactivated?.Invoke(Data);
         OnDeactivatedEvent?.Raise(Data);
-        animator.SetBool(IsActivePropertyID, false);
-        audioSource.Stop();
     }
 }

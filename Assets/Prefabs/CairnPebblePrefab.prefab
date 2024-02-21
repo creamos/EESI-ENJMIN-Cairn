@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8991616615363354718}
   - component: {fileID: 8991616615363354719}
   - component: {fileID: 4264427878807303020}
-  - component: {fileID: 8927703283064277443}
   - component: {fileID: 8507817130265105575}
   - component: {fileID: 5785733150681131774}
+  - component: {fileID: 5481839001699582077}
   m_Layer: 5
-  m_Name: CairnPeeblePrefab
+  m_Name: CairnPebblePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,27 +136,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!95 &8927703283064277443
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991616615363354717}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 9f746145ecb7cf14aac0ebe4f50dd089, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8507817130265105575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830fc020f471b6341a195202b3a35c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Data>k__BackingField: {fileID: 11400000, guid: 57a8bb255509c8448bc22cd870ac0338, type: 2}
+  <Data>k__BackingField: {fileID: 0}
   OnTriggered:
     m_PersistentCalls:
       m_Calls: []
@@ -279,3 +258,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5481839001699582077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8991616615363354717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ced76937fcd0b745aea1fe495dda3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Frames: []
+  fps: 6
+  isPlaying: 0

@@ -38,8 +38,8 @@ public class FauxFix : MonoBehaviour
         Frames = frames;
         if (frames.Length > 0)
         {
-            image.sprite = frames[0];
             frameID = Math.Clamp(frameID, 0, frames.Length);
+            image.sprite = frames[frameID];
         }
     }
 
@@ -50,6 +50,9 @@ public class FauxFix : MonoBehaviour
         {
             lastChangeTime = Time.time;
         }
+        
+        if (Frames.Length > 0) 
+            image.sprite = Frames[0];
     }
 
     private void Update()
