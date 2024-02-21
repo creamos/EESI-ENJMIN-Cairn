@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4849510273437584306}
   - component: {fileID: 4849510273437584307}
   - component: {fileID: 2669466045367709231}
+  - component: {fileID: 4913626782336100912}
   m_Layer: 5
   m_Name: PickableStoneAnimPrefab
   m_TagString: PickableStone
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -920718687, guid: d2f2382593491cd428d6fb3925d7a791, type: 3}
+  m_Sprite: {fileID: 1332790626, guid: a029ea7ae31f690459cd6a3719e7a8c3, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -144,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 4849510273437584317}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 350517c3945a1c64790993ab489239d7, type: 2}
+  m_Controller: {fileID: 22100000, guid: 9f746145ecb7cf14aac0ebe4f50dd089, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -155,3 +156,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4913626782336100912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849510273437584317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4095dca1ae2c84d860dd152fed1fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
