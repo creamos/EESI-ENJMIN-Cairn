@@ -31,7 +31,7 @@ public class CairnManagement : MonoBehaviour
 
     void FitRockInPlace(int idxRockStart, Rock rock , int floor, int idxRockPosInFloor){
         for (int i =0; i<rock.rockWidth ;i++){
-            spaces[idxRockStart+i]= false;
+            spaces[idxRockStart+i]= true;
         }
         int[] rockCoords = new int[2] {floor+idxRockPosInFloor,floor};
         rocksInCairnCoords.Add(rockCoords);
@@ -54,7 +54,7 @@ public class CairnManagement : MonoBehaviour
                 if(k+w <= floorWidth){ //Si le caillou peut rentrer à cet etage depuis cette position, je regarde si l'espace est libre ou deja pris par d'autre caillou 
                     canFit= true;
                     for (int j =0; j<w;j++){
-                        if(spaces[idxFloorStart+k+j]==false){
+                        if(spaces[idxFloorStart+k+j]==true){
                             canFit =false;
                             break;
                         }
@@ -73,12 +73,6 @@ public class CairnManagement : MonoBehaviour
     }
 
     void FillCairnWithOrderedRockList(){ 
-        int w;
-        int idxFloorStart;
-        int floorWidth ;
-        bool canFit;
-        bool fitted;
-
         foreach (Rock rock in rocksInCairn){
             FindRockPlace(rock);
         }
@@ -89,7 +83,7 @@ public class CairnManagement : MonoBehaviour
         int n = lowestFloorWidth+1 ;
         for( int i=0; i< (lowestFloorWidth+1) /2; i++ ){ // pour chaque etage du cairn
             for( int j=0; j< n; j++ ){
-                spaces.Add(true);
+                spaces.Add(false);
             }
             n-=2; // etage suivant = 2 espaces de moins car pyramidal
         }
@@ -116,5 +110,42 @@ public class CairnManagement : MonoBehaviour
         rocksInCairnCoords = new List<int[]>();
     }
 
+    public bool HasRock(int floor, int location)
+    {
+        int floorWidth= lowestFloorWidth;
+        int idxStartFloor=0;
+        for (int i=0; i<floor;i++){
+            idxStartFloor+= floorWidth;
+            floorWidth-=2;
+        }
+        return spaces[idxStartFloor+location];
+    }
+    
+    public Rock GetRockAtLocation(int floor, int location)
+    {
+        int idx=0;
+        foreach(Rock r in rocksInCairn){
+            if(floor == rocksInCairnCoords[idx][1] && location == rocksInCairnCoords[idx][0]){
+                return r;
+            }
+            idx+=1;
+        }
+        return null;
+    }
+    
+    public Rock[] GetRocks(int floor)
+    {
+        Rock[] rocks = new Rock[lowestFloorWidth];
+        for(int i=0; i<lowestFloorWidth;i++){
+            rocks[i] = GetRockAtLocation(floor,i);
+            
+        }
+        return rocks;
+    }
 
+    public int GetFloorNumber(){
+        return (lowestFloorWidth+1)/2;
+    }
+    
+    //TODO add rodck - discard rock - changer code to allow for multiple pyramids
 }
