@@ -29,7 +29,7 @@ public class CairnManagement : MonoBehaviour
 
     public int lowestFloorWidth = 9;
 
-    void FitRockInPlace(int idxRockStart, Rock rock , int floor, int idxRockPosInFloor){
+    private void FitRockInPlace(int idxRockStart, Rock rock , int floor, int idxRockPosInFloor){
         for (int i =0; i<rock.rockWidth ;i++){
             spaces[idxRockStart+i]= true;
         }
@@ -37,7 +37,15 @@ public class CairnManagement : MonoBehaviour
         rocksInCairnCoords.Add(rockCoords);
     }
 
-    void FindRockPlace(Rock rock){
+    private void UnfitRockInPlace(int idxRockStart, Rock rock , int floor, int idxRockPosInFloor){
+        for (int i =0; i<rock.rockWidth ;i++){
+            spaces[idxRockStart+i]= false;
+        }
+        int[] rockCoords = new int[2] {floor+idxRockPosInFloor,floor};
+        rocksInCairnCoords.Add(rockCoords);
+    }
+
+    private void FindRockPlace(Rock rock){
         int w = rock.rockWidth;
         int idxFloorStart =0;
         int floorWidth = lowestFloorWidth;
@@ -72,14 +80,14 @@ public class CairnManagement : MonoBehaviour
         }
     }
 
-    void FillCairnWithOrderedRockList(){ 
+    private void FillCairnWithOrderedRockList(){ 
         foreach (Rock rock in rocksInCairn){
             FindRockPlace(rock);
         }
     }
 
     // fonction qui crée un cairn vide ( liste de booleen where true = espace vide)
-    void InitializeCairnSpace(){
+    private void InitializeCairnSpace(){
         int n = lowestFloorWidth+1 ;
         for( int i=0; i< (lowestFloorWidth+1) /2; i++ ){ // pour chaque etage du cairn
             for( int j=0; j< n; j++ ){
@@ -100,18 +108,17 @@ public class CairnManagement : MonoBehaviour
         FillCairnWithOrderedRockList();
     }
 
-    public void ResetCairnSpace(){
+    private void ResetCairnSpace(){
         for( int i=0; i<  spaces.Count; i++ ){ // pour chaque etage du cairn
                 spaces[i]= false;
         }
     }
 
-    public void ResetRockCoords(){
+    private void ResetRockCoords(){
         rocksInCairnCoords = new List<int[]>();
     }
 
-    public bool HasRock(int floor, int location)
-    {
+    public bool HasRock(int floor, int location){
         int floorWidth= lowestFloorWidth;
         int idxStartFloor=0;
         for (int i=0; i<floor;i++){
@@ -121,8 +128,7 @@ public class CairnManagement : MonoBehaviour
         return spaces[idxStartFloor+location];
     }
     
-    public Rock GetRockAtLocation(int floor, int location)
-    {
+    public Rock GetRockAtLocation(int floor, int location){
         int idx=0;
         foreach(Rock r in rocksInCairn){
             if(floor == rocksInCairnCoords[idx][1] && location == rocksInCairnCoords[idx][0]){
@@ -133,8 +139,7 @@ public class CairnManagement : MonoBehaviour
         return null;
     }
     
-    public Rock[] GetRocks(int floor)
-    {
+    public Rock[] GetRocks(int floor){
         Rock[] rocks = new Rock[lowestFloorWidth];
         for(int i=0; i<lowestFloorWidth;i++){
             rocks[i] = GetRockAtLocation(floor,i);
@@ -147,5 +152,28 @@ public class CairnManagement : MonoBehaviour
         return (lowestFloorWidth+1)/2;
     }
     
+    private int GetIdxRockStart( int floor, int Pos){
+        int Width = lowestFloorWidth;
+        int idx=0;
+        for (int i =0; i<floor; i++){
+            idx+=Width;
+            i-=2;
+        }
+        return idx +Pos;
+    }
+
+    public void RemoveRandomRock(){
+        int idxRockToRemove = Random.Range(0,rocksInCairn.Count);
+        Rock r = rocksInCairn[idxRockToRemove];
+        UnfitRockInPlace(GetIdxRockStart(rocksInCairnCoords[idxRockToRemove][1],rocksInCairnCoords[idxRockToRemove][0]-rocksInCairnCoords[idxRockToRemove][1]), r , rocksInCairnCoords[idxRockToRemove][1], rocksInCairnCoords[idxRockToRemove][0]);
+        rocksInCairn.RemoveAt(idxRockToRemove);
+        rocksInCairnCoords.RemoveAt(idxRockToRemove);
+    }
+
+    public void AddRock(Rock rock){
+        rocksInCairn.Add(rock);
+        FindRockPlace(rock);
+    }
+
     //TODO add rodck - discard rock - changer code to allow for multiple pyramids
 }
