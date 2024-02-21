@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4849510273437584305}
   - component: {fileID: 4849510273437584306}
   - component: {fileID: 4849510273437584307}
-  - component: {fileID: 3553881182594159654}
   - component: {fileID: 3514618859013859352}
   m_Layer: 5
   m_Name: PickableStonePrefab
@@ -122,31 +121,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4849510273437584306}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3553881182594159654}
-        m_TargetAssemblyTypeName: SendStoneData, Assembly-CSharp
-        m_MethodName: SendData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ("UpdateText",(gameObject.name,gameObject.tag))
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &3553881182594159654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4849510273437584317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d6b1d2759bc7084a9ddd48ee4f37788, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+      m_Calls: []
 --- !u!114 &3514618859013859352
 MonoBehaviour:
   m_ObjectHideFlags: 0

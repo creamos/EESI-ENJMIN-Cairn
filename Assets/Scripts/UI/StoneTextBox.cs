@@ -10,27 +10,35 @@ using TMPro;
 public class StoneTextBox : MonoBehaviour
 {
     public GameObject[] stonesUI;
-    public GameObject stonePannel;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI bodyText;
+    public GameObject textBox;
     // Start is called before the first frame update
     void Start()
     {
-        stonesUI = GameObject.FindGameObjectsWithTag("PickableStone");
-        stonePannel = transform.parent.gameObject;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (stonePannel!= null && stonePannel.activeInHierarchy && stonesUI.Length==0) 
+       
+        if (stonesUI.Length == 0)
         {
             stonesUI = GameObject.FindGameObjectsWithTag("PickableStone");
+            if (stonesUI.Length > 0)
+            {
+                foreach (GameObject stone in stonesUI)
+                {
+                    if (stone.GetComponent<Button>())
+                    {
+                        stone.GetComponent<Button>().onClick.AddListener(() => textBox.SetActive(true));
+                        stone.GetComponent<Button>().onClick.AddListener(() => UpdateText(stone.name, "test"));
+                    }
+                }
+            }
         }
-        else if (stonePannel == null)
-        {
-            stonePannel = transform.parent.gameObject;
-        }
+        
     }
 
     public void UpdateText(string title, string body) 
