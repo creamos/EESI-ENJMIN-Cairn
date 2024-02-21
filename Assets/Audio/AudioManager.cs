@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField]
-    private AudioSource testSound;
+    public 
 
     void Start()
     {
-
-        testSound.Play();
+        
+     
     }
     // Update is called once per frame
     void Update()
