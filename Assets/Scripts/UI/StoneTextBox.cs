@@ -47,11 +47,18 @@ public class StoneTextBox : MonoBehaviour
     public void UpdateText(string title, string body, GameObject stone) 
     {
         SelectPebbleButton buttonManager;
+        //update old Select Stone button
         if (currentStone) {
             buttonManager = currentStone.GetComponent<SelectPebbleButton>();
             if (buttonManager) buttonManager.FauxFixController.IsPlaying = false;
         }
         currentStone = stone;
+        
+        //update new Select Stone button
+        if (currentStone) {
+            buttonManager = currentStone.GetComponent<SelectPebbleButton>();
+            if (buttonManager) buttonManager.FauxFixController.IsPlaying = true;
+        }
         
         //enable currentStone animation
         pickRockButton.onClick.RemoveAllListeners();
