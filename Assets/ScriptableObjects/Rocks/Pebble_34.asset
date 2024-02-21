@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: 
   rockDescription: 
-  rockWidth: 0
+  rockWidth: 4
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 5fe8967e2b511144f99082de6172f855, type: 2}
