@@ -139,18 +139,84 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Pebble_x435_09_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 447
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fd52b041b91ed4bbe97e64766289c3
+      internalID: -1904521000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pebble_x435_09_1
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 0
+        width: 447
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342d818ef83593d4d99a2aa0580e07a2
+      internalID: -1011378988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pebble_x435_09_2
+      rect:
+        serializedVersion: 2
+        x: 3844
+        y: 0
+        width: 447
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4113fa27c9ffab9488e0db97d18acfcb
+      internalID: 1671413357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f55be1d284a8e614e87ee4b5e524902f
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pebble_x435_09_0: -1904521000
+      Pebble_x435_09_1: -1011378988
+      Pebble_x435_09_2: 1671413357
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
