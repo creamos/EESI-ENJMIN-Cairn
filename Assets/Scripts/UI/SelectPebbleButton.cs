@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SelectPebbleButton : MonoBehaviour
@@ -17,14 +19,15 @@ public class SelectPebbleButton : MonoBehaviour
     }
 
     private Button _button;
-    private FauxFix _fauxFixController;
+    [HideInInspector]
+    public FauxFix FauxFixController;
     
     // Start is called before the first frame update
     void Start() 
     {
         _button = GetComponent<Button>();
-        _fauxFixController = GetComponent<FauxFix>();
-        if (rock) _fauxFixController.Initialize(rock);
+        FauxFixController = GetComponent<FauxFix>();
+        if (rock) FauxFixController.Initialize(rock);
         if (_button) _button.onClick.AddListener(OnActiveButton);
     }
 
@@ -34,7 +37,7 @@ public class SelectPebbleButton : MonoBehaviour
         
     }
 
-    void OnActiveButton() {
-        if (_fauxFixController) _fauxFixController.IsPlaying = !_fauxFixController.IsPlaying;
+    public void OnActiveButton() {
+        if (FauxFixController) FauxFixController.IsPlaying = !FauxFixController.IsPlaying;
     }
 }
