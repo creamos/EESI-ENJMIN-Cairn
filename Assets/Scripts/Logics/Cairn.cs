@@ -119,18 +119,20 @@ public class Cairn : MonoBehaviour
         rocksInCairnCoords = new List<int[]>();
     }
 
-    private void RemoveRocksfromCairnFromIndex(int idx){
-         for(int i=idx;i<rocksInCairn.Count;i++){
-            UnfitRockInPlace( rocksInCairn[i] , rocksInCairnCoords[i][0], rocksInCairnCoords[i][1]);
-            rocksInCairnCoords.RemoveAt(idx);
-        }
-    }
-
     private void RemoveLastFloor(){
         for(int i=0;i<floorWidth;i++){
-            spaces.RemoveAt(spaces.Count);
+            spaces.RemoveAt(spaces.Count-1); //ICI
         }
         floorNb--;
+    }
+
+    private void RemoveRocksfromCairnFromIndex(int idx){
+        for(int i=idx;i<rocksInCairn.Count;i++){
+            UnfitRockInPlace( rocksInCairn[i] , rocksInCairnCoords[i][0], rocksInCairnCoords[i][1]);
+        }
+        for(int i=idx;i<rocksInCairn.Count;i++){ //ICI
+            rocksInCairnCoords.RemoveAt(idx);
+        }
     }
 
     private void RemoveEmptyFloors(){
