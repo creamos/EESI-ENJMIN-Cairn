@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
+  m_Name: Pebble_26
+  m_EditorClassIdentifier: 
+  prefabName: 
+  rockDescription: 
+  rockWidth: 3
+  RockAudioCLip: {fileID: 0}
+  RockAnimClip: {fileID: 7400000, guid: b9da3ef99e9e5bc4b98a6cfa0f630116, type: 2}
+  FrameList:
+  - {fileID: -1517034525, guid: 197b8f0c4b664c944ab1eea65e986a58, type: 3}
+  - {fileID: -993997428, guid: 197b8f0c4b664c944ab1eea65e986a58, type: 3}
+  - {fileID: 1798755708, guid: 197b8f0c4b664c944ab1eea65e986a58, type: 3}
