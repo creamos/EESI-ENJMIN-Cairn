@@ -12,4 +12,5 @@ public class Rock : ScriptableObject
     
     // Ajouter l'image, et ce dont a besoin viktor pour les anim
     public AnimationClip RockAnimClip;
+    public Sprite[] FrameList;
 }
