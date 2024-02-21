@@ -5,7 +5,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using System;
+using ScriptableEvents;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class StoneTextBox : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class StoneTextBox : MonoBehaviour
     public TextMeshProUGUI bodyText;
     public GameObject textBox;
     public Button pickRockButton;
+
+    public RockEvent OnPebbleAddedByPlayer;
+
+    [Header("[TODO] Remove when valid pebbles can be selected from UI")] [SerializeField]
+    private PebbleRegistry registry;
    
     // Start is called before the first frame update
     void Start()
@@ -71,6 +78,9 @@ public class StoneTextBox : MonoBehaviour
 
     public void SendRockData (GameObject stone) //datas to sendhere
     {
+        Rock RandomPebble() => registry.Pebbles[Random.Range(0, registry.Pebbles.Count)];
+        
         Debug.Log("Datas sent: "+stone.name);
+        OnPebbleAddedByPlayer?.Raise(RandomPebble());
     }
 }

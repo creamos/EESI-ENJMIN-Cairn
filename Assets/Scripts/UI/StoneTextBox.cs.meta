@@ -3,7 +3,14 @@ guid: a356b418b30e7844d872a74a341223e8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - currentStone: {instanceID: 0}
+  - titleText: {instanceID: 0}
+  - bodyText: {instanceID: 0}
+  - textBox: {instanceID: 0}
+  - pickRockButton: {instanceID: 0}
+  - OnPebbleAddedByPlayer: {fileID: 11400000, guid: 27372bba796fcd44f9e701b5f51d76fe, type: 2}
+  - registry: {fileID: 11400000, guid: 0b9ac8d1c0e6ac44e9ae34aa4dcd2914, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

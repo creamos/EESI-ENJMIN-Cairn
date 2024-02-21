@@ -23,6 +23,7 @@ public class CairnInitializer : MonoBehaviour
                 rock = registry.Pebbles[Random.Range(0, registry.Pebbles.Count)];
             } while (spawnedRocks.Contains(rock));
             
+            spawnedRocks.Add(rock);
             cairn.AddRock(rock);
             
             i++;
