@@ -13,6 +13,7 @@ public class FauxFix : MonoBehaviour
     private int frameID;
     private float lastChangeTime;
     
+    [SerializeField]
     private bool isPlaying;
     public bool IsPlaying { 
         get => isPlaying;
@@ -45,6 +46,10 @@ public class FauxFix : MonoBehaviour
     private void OnEnable()
     {
         image ??= GetComponent<Image>();
+        if (isPlaying)
+        {
+            lastChangeTime = Time.time;
+        }
     }
 
     private void Update()
