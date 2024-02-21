@@ -5,14 +5,14 @@ using UnityEngine;
 public class CairnManagement : MonoBehaviour
 {
     private List<Rock> rocksInCairn = new List<Rock>();
-    private List<bool> spaces;
-    private List<int[]> rocksInCairnCoords;
+    private List<bool> spaces = new List<bool>();
+    private List<int[]> rocksInCairnCoords = new List<int[]>();
 
-    public int lowestFloorWidth;
+    public int lowestFloorWidth = 9;
 
     void Fit(int idxRockStart, Rock rock , int floor, int idxRockPosInFloor){
-        for (int i =0; i<rock.rockWidth;i++){
-            spaces[idxRockStart+i]= true;
+        for (int i =0; i<rock.rockWidth ;i++){
+            spaces[idxRockStart+i]= false;
         }
         int[] rockCoords = new int[2] {floor+idxRockPosInFloor,floor};
         rocksInCairnCoords.Add(rockCoords);
@@ -71,15 +71,16 @@ public class CairnManagement : MonoBehaviour
         }
     }
 
+    public void ResetCairnSpace(){
+        for( int i=0; i<  spaces.Count; i++ ){ // pour chaque etage du cairn
+                spaces[i]= false;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
         InitializeCairnSpace();
+        FillCairn();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
