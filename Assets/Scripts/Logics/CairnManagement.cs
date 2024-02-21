@@ -4,13 +4,32 @@ using UnityEngine;
 
 public class CairnManagement : MonoBehaviour
 {
+
+    // Je gère une liste de cailloux à rajouter dans l'ordre dans le cairn 
+    // Je renvoie une liste de coordonnée de cailloux 
+
+    // Le cairn est une grille carée de taille = la largeur de l'étage le plus bas 
+    // exemple :                                         
+    //  _ _ _ _ _            un cailloux de largeur 3 et de coordonées (3,0) sela ici  _ _ _ _ _   et occupe l'espace suivant  _ _ _ _ _
+    // | | | | | |    4                                                               | | | | | |                             | | | | | |
+    //  _ _ _ _ _                                                                      _ _ _ _ _                               _ _ _ _ _
+    // | | | | | |    3                                                               | | | | | |                             | | | | | |
+    //  _ _ _ _ _                                                                      _ _ _ _ _                               _ _ _ _ _
+    // | | | | | |    2                                                               | | | | | |                             | | | | | |
+    //  _ _ _ _ _                                                                      _ _ _ _ _                               _ _ _ _ _
+    // | | | | | |    1                                                               | | | | | |                             | | | | | |
+    //  _ _ _ _ _                                                                      _ _ _ _ _                               _ _ _ _ _
+    // | | | | | |    0                                                               | | |x| | |                             | | |x|x|x|
+
+    //  0 1 2 3 4 
+
     private List<Rock> rocksInCairn = new List<Rock>();
     private List<bool> spaces = new List<bool>();
     private List<int[]> rocksInCairnCoords = new List<int[]>();
 
     public int lowestFloorWidth = 9;
 
-    void Fit(int idxRockStart, Rock rock , int floor, int idxRockPosInFloor){
+    void FitRockInPlace(int idxRockStart, Rock rock , int floor, int idxRockPosInFloor){
         for (int i =0; i<rock.rockWidth ;i++){
             spaces[idxRockStart+i]= false;
         }
@@ -18,7 +37,42 @@ public class CairnManagement : MonoBehaviour
         rocksInCairnCoords.Add(rockCoords);
     }
 
-    void FillCairn(){ // In progress, jprend mon temps mdr
+    void FindRockPlace(Rock rock){
+        int w = rock.rockWidth;
+        int idxFloorStart =0;
+        int floorWidth = lowestFloorWidth;
+        bool fitted = false;
+        bool canFit;
+
+        //  je parcours tous les etages du cairn pour trouver une place au caillou
+        for (int i=0; i< (lowestFloorWidth+1) /2; i++){ //pour chaque etage du cern
+            if(fitted){
+                break;
+            }
+
+            for(int k=0; k<floorWidth;k++){ // a chaque position de cet etage 
+                if(k+w <= floorWidth){ //Si le caillou peut rentrer à cet etage depuis cette position, je regarde si l'espace est libre ou deja pris par d'autre caillou 
+                    canFit= true;
+                    for (int j =0; j<w;j++){
+                        if(spaces[idxFloorStart+k+j]==false){
+                            canFit =false;
+                            break;
+                        }
+                    }
+                    if(canFit){ // auquel cas je place le caillou et je sors du process pour passer au cailloux d'apres 
+                        FitRockInPlace(idxFloorStart+k, rock, i,k);
+                        fitted= true;
+                        break;
+                    }
+                }
+            }
+
+            idxFloorStart+= floorWidth;
+            floorWidth-=2;
+        }
+    }
+
+    void FillCairnWithOrderedRockList(){ 
         int w;
         int idxFloorStart;
         int floorWidth ;
@@ -26,37 +80,7 @@ public class CairnManagement : MonoBehaviour
         bool fitted;
 
         foreach (Rock rock in rocksInCairn){
-            w = rock.rockWidth;
-            fitted = false;
-
-            // Pour chaque rock je parcours tous les etages du cairn pour trouver une place au caillou
-            idxFloorStart=0;
-            floorWidth= lowestFloorWidth;
-            for (int i=0; i< (lowestFloorWidth+1) /2; i++){ //pour chaque etage du cern
-                if(fitted){
-                    break;
-                }
-
-                for(int k=0; k<floorWidth;k++){ // a chaque position de cet etage 
-                    if(k+w <= floorWidth){ //Si le caillou peut rentrer à cet etage depuis cette position, je regarde si l'espace est libre ou deja pris par d'autre caillou 
-                        canFit= true;
-                        for (int j =0; j<w;j++){
-                            if(spaces[idxFloorStart+k+j]==false){
-                                canFit =false;
-                                break;
-                            }
-                        }
-                        if(canFit){ // auquel cas je place le caillou et je sors du process pour passer au cailloux d'apres 
-                            Fit(idxFloorStart+k, rock, i,k);
-                            fitted= true;
-                            break;
-                        }
-                    }
-                }
-
-                idxFloorStart+= floorWidth;
-                floorWidth-=2;
-            }
+            FindRockPlace(rock);
         }
     }
 
@@ -71,16 +95,26 @@ public class CairnManagement : MonoBehaviour
         }
     }
 
+    public void ResetCairn(){
+        if(spaces.Count>0){
+            ResetCairnSpace();
+        }
+        else{
+            InitializeCairnSpace();
+        }
+        ResetRockCoords();
+        FillCairnWithOrderedRockList();
+    }
+
     public void ResetCairnSpace(){
         for( int i=0; i<  spaces.Count; i++ ){ // pour chaque etage du cairn
                 spaces[i]= false;
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        InitializeCairnSpace();
-        FillCairn();
+
+    public void ResetRockCoords(){
+        rocksInCairnCoords = new List<int[]>();
     }
+
 
 }
