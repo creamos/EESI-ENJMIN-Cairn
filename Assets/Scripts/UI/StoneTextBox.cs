@@ -10,10 +10,12 @@ using TMPro;
 public class StoneTextBox : MonoBehaviour
 {
     public GameObject[] stonesUI;
+    public GameObject currentStone;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI bodyText;
     public GameObject textBox;
     public Button pickRockButton;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,12 @@ public class StoneTextBox : MonoBehaviour
 
     public void UpdateText(string title, string body, GameObject stone) 
     {
+        if (currentStone!=null) 
+        { 
+            //disable currentStone animation
+        }
+        currentStone = stone;
+        //enable currentStone animation
         pickRockButton.onClick.RemoveAllListeners();
         titleText.text = title;
         bodyText.text = body;
