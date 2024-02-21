@@ -384,13 +384,14 @@ GameObject:
   - component: {fileID: 253976446}
   - component: {fileID: 253976445}
   - component: {fileID: 253976447}
+  - component: {fileID: 253976448}
   m_Layer: 5
   m_Name: Select Stone Pannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &253976444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -466,6 +467,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &253976448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253976443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a356b418b30e7844d872a74a341223e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stonesUI: []
+  titleText: {fileID: 1728513617}
+  bodyText: {fileID: 139509324}
+  textBox: {fileID: 857758350}
+  pickRockButton: {fileID: 1559147958}
 --- !u!1 &254069804
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,8 +658,8 @@ RectTransform:
   m_Father: {fileID: 349276092}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.8}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -896,7 +914,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 533074413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e0959a22572b7c42a7f07f512dcf151, type: 3}
+  m_Script: {fileID: 11500000, guid: 4892bfe6ace8bf64ba38a5bdb38a763a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &543358856
@@ -1496,7 +1514,6 @@ GameObject:
   - component: {fileID: 857758351}
   - component: {fileID: 857758353}
   - component: {fileID: 857758352}
-  - component: {fileID: 857758354}
   m_Layer: 5
   m_Name: Stone Description Pannel
   m_TagString: Untagged
@@ -1565,22 +1582,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857758350}
   m_CullTransparentMesh: 1
---- !u!114 &857758354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857758350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a26b1331ea31d843aa134b989ee715e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stonesUI: []
-  stonePannel: {fileID: 0}
-  titleText: {fileID: 1728513617}
-  bodyText: {fileID: 139509324}
 --- !u!1 &864859386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849510273437584316, guid: 47d099e4096c85d4cac737c56bc5c599, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849510273437584316, guid: 47d099e4096c85d4cac737c56bc5c599, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1892,7 +1893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849510273437584317, guid: 47d099e4096c85d4cac737c56bc5c599, type: 3}
       propertyPath: m_Name
-      value: PickableStonePrefab (1)
+      value: peridot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d099e4096c85d4cac737c56bc5c599, type: 3}
@@ -3028,7 +3029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849510273437584317, guid: 47d099e4096c85d4cac737c56bc5c599, type: 3}
       propertyPath: m_Name
-      value: PickableStonePrefab
+      value: quartz
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d099e4096c85d4cac737c56bc5c599, type: 3}

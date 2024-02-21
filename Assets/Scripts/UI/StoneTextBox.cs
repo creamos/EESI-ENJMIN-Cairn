@@ -13,6 +13,7 @@ public class StoneTextBox : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI bodyText;
     public GameObject textBox;
+    public Button pickRockButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,7 @@ public class StoneTextBox : MonoBehaviour
                     if (stone.GetComponent<Button>())
                     {
                         stone.GetComponent<Button>().onClick.AddListener(() => textBox.SetActive(true));
-                        stone.GetComponent<Button>().onClick.AddListener(() => UpdateText(stone.name, "test"));
+                        stone.GetComponent<Button>().onClick.AddListener(() => UpdateText(stone.name, "test",stone));
                     }
                 }
             }
@@ -41,9 +42,18 @@ public class StoneTextBox : MonoBehaviour
         
     }
 
-    public void UpdateText(string title, string body) 
+    public void UpdateText(string title, string body, GameObject stone) 
     {
+        pickRockButton.onClick.RemoveAllListeners();
         titleText.text = title;
         bodyText.text = body;
+        pickRockButton.onClick.AddListener(() => SendRockData(stone));
+        pickRockButton.onClick.AddListener(() => gameObject.SetActive(false));
+        pickRockButton.onClick.AddListener(() => textBox.SetActive(false));
+    }
+
+    public void SendRockData (GameObject stone) //datas to sendhere
+    {
+        Debug.Log("Datas sent: "+stone.name);
     }
 }
