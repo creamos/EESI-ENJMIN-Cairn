@@ -9,10 +9,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 public class CairnPebbleButton : MonoBehaviour
 {
-    private static readonly int IsActivePropertyID = Animator.StringToHash("IsActive");
-    
     [field:SerializeField]
     public Rock Data { get; private set; }
+
+    [SerializeField] private CairnData cairnData;
     
     private FauxFix fauxFix;
     private Button button;
@@ -23,8 +23,6 @@ public class CairnPebbleButton : MonoBehaviour
     
     public RockEvent OnPebbleSpawned;
     public RockEvent OnTriggeredEvent, OnActivatedEvent, OnDeactivatedEvent;
-
-    
 
     public bool IsActivated { get; private set; } = false;
 
@@ -57,8 +55,7 @@ public class CairnPebbleButton : MonoBehaviour
     public void Initialize(Rock data, bool activeState = false)
     {
         Data = data;
-        RectTransform rectTr = transform as RectTransform;
-        rectTr.sizeDelta = new Vector2(data.rockWidth * 107, rectTr.rect.height);
+        RecalculateSize(cairnData.canvasWidth);
         fauxFix?.Initialize(data);
         IsActivated = activeState;
         audioSource.clip = Data.RockAudioCLip;
@@ -94,5 +91,16 @@ public class CairnPebbleButton : MonoBehaviour
         audioSource.Stop();
         OnDeactivated?.Invoke(Data);
         OnDeactivatedEvent?.Raise(Data);
+    }
+
+    public void RecalculateSize(float canvasWidth)
+    {
+        const float heightRatio = 90f / 107f;
+        float unitWidth = canvasWidth / cairnData.cairnWidth;
+        float width = unitWidth * Data.rockWidth;
+        float height = unitWidth * heightRatio;
+        
+        RectTransform rectTr = transform as RectTransform;
+        rectTr.sizeDelta = new Vector2(width, height);
     }
 }

@@ -4,6 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - cairnData: {fileID: 11400000, guid: ecd1e3d1384d927448a2d87d3d63dc10, type: 2}
   - OnCairnModified: {fileID: 11400000, guid: 6875230f6e8244b41a76acdeb2953317, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8507817130265105575}
   - component: {fileID: 5785733150681131774}
   - component: {fileID: 5481839001699582077}
+  - component: {fileID: 4059479791071482449}
   m_Layer: 5
   m_Name: CairnPebblePrefab
   m_TagString: Untagged
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Data>k__BackingField: {fileID: 0}
+  cairnData: {fileID: 11400000, guid: ecd1e3d1384d927448a2d87d3d63dc10, type: 2}
   OnTriggered:
     m_PersistentCalls:
       m_Calls: []
@@ -273,3 +275,31 @@ MonoBehaviour:
   Frames: []
   fps: 6
   isPlaying: 0
+--- !u!114 &4059479791071482449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8991616615363354717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd88341b953e4367927b28e12cf6eae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 64db846fca69f3b4a8cd8c8fc6894500, type: 2}
+  OnEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8507817130265105575}
+        m_TargetAssemblyTypeName: CairnPebbleButton, Assembly-CSharp
+        m_MethodName: RecalculateSize
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

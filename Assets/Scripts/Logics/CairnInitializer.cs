@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -7,16 +5,37 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(Cairn))]
 public class CairnInitializer : MonoBehaviour
 {
+    [SerializeField] private CairnData cairnData;
     [SerializeField] private PebbleRegistry registry;
+
+    private Cairn cairn;
 
     private void Start()
     {
-        var cairn = GetComponent<Cairn>();
+        cairn = GetComponent<Cairn>();
         if (!cairn) return;
 
+        if (cairnData)
+        {
+            cairnData.Load();
+            if (cairnData.loadedPebbleIDs.Count == 0)
+            {
+                RandomFill(5);
+                cairn.Save();
+            }
+
+            else
+            {
+                FillFromList(cairnData.loadedPebbleIDs);
+            }
+        }
+    }
+
+    private void RandomFill(int count)
+    {
         int i = 0;
-        List<Rock> spawnedRocks = new List<Rock>(5);
-        while (i < 5)
+        List<Rock> spawnedRocks = new List<Rock>(count);
+        while (i < count)
         {
             Rock rock;
             do {
@@ -24,9 +43,22 @@ public class CairnInitializer : MonoBehaviour
             } while (spawnedRocks.Contains(rock));
             
             spawnedRocks.Add(rock);
-            cairn.AddRock(rock);
+            cairn.AddRock(rock, false);
             
             i++;
+        }
+    }
+
+    private void FillFromList(List<int> pebbleIDs)
+    {
+        if (!registry) return;
+
+        int registrySize = registry.Pebbles.Count;
+        foreach (var pebbleID in pebbleIDs)
+        {
+            if (pebbleID >= registrySize || pebbleID < 0) continue;
+            var pebble = registry.Pebbles[pebbleID];
+            cairn.AddRock(pebble, false);
         }
     }
 }
