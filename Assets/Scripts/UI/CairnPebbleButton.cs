@@ -73,7 +73,12 @@ public class CairnPebbleButton : MonoBehaviour
         OnTriggered?.Invoke(Data);
         OnTriggeredEvent?.Raise(Data);
 
-        if (IsActivated) Activate();
+        UpdateAudioPlayState();
+    }
+
+    public void UpdateAudioPlayState()
+    {
+        if (!cairnData.IsMuted && IsActivated) Activate();
         else Deactivate();
     }
 

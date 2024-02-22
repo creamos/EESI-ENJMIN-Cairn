@@ -18,7 +18,9 @@ public class CairnInitializer : MonoBehaviour
         if (cairnData)
         {
             cairnData.Load();
-            if (cairnData.loadedPebbleIDs.Count == 0)
+            
+            bool shouldReset = cairnData.randomCairnOnStart;
+            if (cairnData.loadedPebbleIDs.Count == 0 || shouldReset)
             {
                 RandomFill(5);
                 cairn.Save();

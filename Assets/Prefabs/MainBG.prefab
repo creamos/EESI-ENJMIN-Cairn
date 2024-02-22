@@ -416,6 +416,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: ecd1e3d1384d927448a2d87d3d63dc10, type: 2}
+        m_TargetAssemblyTypeName: CairnData, Assembly-CSharp
+        m_MethodName: set_IsMuted
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &280844403669484005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1018,18 @@ MonoBehaviour:
       - m_Target: {fileID: 280844404142267253}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: ecd1e3d1384d927448a2d87d3d63dc10, type: 2}
+        m_TargetAssemblyTypeName: CairnData, Assembly-CSharp
+        m_MethodName: set_IsMuted
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

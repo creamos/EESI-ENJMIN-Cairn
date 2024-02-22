@@ -16,6 +16,23 @@ public class CairnData : ScriptableObject
     public FloatEvent OnCanvasWidthUpdatedEvent;
 
     [NonSerialized] public List<int> loadedPebbleIDs;
+    [NonSerialized] private bool isMuted;
+    [SerializeField] public BoolEvent OnMutedStateChanged; 
+
+    public bool IsMuted
+    {
+        get => isMuted;
+        set
+        {
+            if (value != isMuted)
+            {
+                isMuted = value;
+                OnMutedStateChanged?.Raise(isMuted);
+            }
+        }
+    }
+
+    public bool randomCairnOnStart = true;
     
     public void Load()
     {

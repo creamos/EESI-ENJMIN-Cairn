@@ -19,7 +19,13 @@ public class StoneTextBox : MonoBehaviour
     public Button pickRockButton;
 
     public RockEvent OnPebbleAddedByPlayer;
-   
+    public GameEvent OnPanelOpened;
+    
+    private void OnEnable()
+    {
+        OnPanelOpened?.Raise();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
