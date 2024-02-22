@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_45
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Infinity
+  rockDescription: 'Sometimes I look at the sky
+
+    And realize how big I am'
   rockWidth: 7
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 739d933cde6aa114f8b0ff1e09fe963f, type: 2}

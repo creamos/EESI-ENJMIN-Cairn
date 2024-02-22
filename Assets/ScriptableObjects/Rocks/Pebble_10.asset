@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_10
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Longing
+  rockDescription: 'The ruins of a dreamcatcher,
+
+    The stream of throughts coming
+
+    Whenever
+    one''s looking yonder'
   rockWidth: 2
   RockAudioCLip: {fileID: 8300000, guid: 1b5969386ce6dfd4596a046be2e564bc, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 49ac0f1a0c2125344b8fedc62787d780, type: 2}

@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_11
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Ambiguity
+  rockDescription: 'Waters of life, Fires of doom
+
+    Eternal strife, devoid of
+    gloom
+
+    Like a small knife, in your bedroom'
   rockWidth: 2
   RockAudioCLip: {fileID: 8300000, guid: 39fafd3799098814eb9c4be688811721, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 64d012dec489b5447add7aa0f4cc032a, type: 2}

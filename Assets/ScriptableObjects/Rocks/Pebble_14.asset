@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_14
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Curiosity
+  rockDescription: 'Mirror mirror on the wall
+
+    What will the Canopy send us
+
+    What
+    kind of stuff will fall '
   rockWidth: 2
   RockAudioCLip: {fileID: 8300000, guid: c08c1002b1ea8234db3d05bb9d42e935, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 7998dabaa20f9f8499143f6d301368c5, type: 2}

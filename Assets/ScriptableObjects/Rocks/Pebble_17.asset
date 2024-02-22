@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_17
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Look
+  rockDescription: "A call to move, like a battlecry \r\nwhen things are too still"
   rockWidth: 2
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 45258a2a63122c24793c0d2d04e3b0fd, type: 2}

@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_13
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Noise
+  rockDescription: 'Elation in effort
+
+    Joy in repetition
+
+    Sharpening of
+    the Self'
   rockWidth: 2
   RockAudioCLip: {fileID: 8300000, guid: 4750852e223343c42b8d3c5a3659dd45, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 2d37c07b4ac6add42b3ae25377b85c86, type: 2}

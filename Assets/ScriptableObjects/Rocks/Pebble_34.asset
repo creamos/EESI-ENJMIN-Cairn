@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_34
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Anticipation
+  rockDescription: "Facing the void \r\nDo you fear it\r\nOr welcome it"
   rockWidth: 4
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 5fe8967e2b511144f99082de6172f855, type: 2}

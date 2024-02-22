@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_06
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Calm
+  rockDescription: 'When the static clears
+
+    And things feel calm again
+
+    What
+    will remain?'
   rockWidth: 1
   RockAudioCLip: {fileID: 8300000, guid: 79156f19d974ae94490bc02668982244, type: 3}
   RockAnimClip: {fileID: 7400000, guid: eacf3c4d3f8ef6b4fb4eb051fa844663, type: 2}

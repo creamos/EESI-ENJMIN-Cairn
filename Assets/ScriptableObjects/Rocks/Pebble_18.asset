@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_18
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Playful
+  rockDescription: "Add to anything the sound of you\r\nJust to see what happens\r\nAnd
+    then nothing \r\nYou're still free"
   rockWidth: 2
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 5f2c9c7ff9316b945a253a79a93322b1, type: 2}

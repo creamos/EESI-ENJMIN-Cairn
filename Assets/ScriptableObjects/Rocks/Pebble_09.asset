@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_09
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Brilliance
+  rockDescription: "An Idea, like \r\nA bright buzzing in the brain,\r\nCarelessly
+    surges through "
   rockWidth: 2
   RockAudioCLip: {fileID: 8300000, guid: 2eb1a83822e62204eb5e72364af97123, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 95c5f18def53238428bf2abacad9f15d, type: 2}

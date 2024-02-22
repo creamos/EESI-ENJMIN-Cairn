@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_42
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Revolution
+  rockDescription: "Steal, burn, kill\r\nas nothing gets done without \r\nviolence "
   rockWidth: 7
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 355dd3d9ff79d804d8d63d560ad25c87, type: 2}

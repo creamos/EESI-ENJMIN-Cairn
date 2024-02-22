@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_15
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Tension
+  rockDescription: 'A mind holding its breath
+
+    Standing in wait
+
+    Of what''s
+    coming up'
   rockWidth: 2
   RockAudioCLip: {fileID: 8300000, guid: ee4ec4f01f835204abe4241dc50cf2c6, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 9bcfd21547926f447b8020d490d52eb3, type: 2}

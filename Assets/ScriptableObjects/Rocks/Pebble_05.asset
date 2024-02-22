@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_05
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Breath
+  rockDescription: 'Through the leaves
+
+    As the wind blows
+
+    A whisper calls
+    to us'
   rockWidth: 1
   RockAudioCLip: {fileID: 8300000, guid: a5fd45c9a95c37e40b922051fb7aee2e, type: 3}
   RockAnimClip: {fileID: 7400000, guid: cb210e1e52e1dd94cac51b34a7b72582, type: 2}

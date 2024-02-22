@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_04
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Prayer
+  rockDescription: 'Sense is lost as words are said
+
+    Meaning comes along with
+    faith
+
+    And a song is reborn'
   rockWidth: 1
   RockAudioCLip: {fileID: 8300000, guid: 08f9f78b898cf5c4881504910a59e2a3, type: 3}
   RockAnimClip: {fileID: 7400000, guid: e89e16331fa0296468a45eb98cfea48a, type: 2}
