@@ -12,75 +12,63 @@ using Random = UnityEngine.Random;
 public class StoneTextBox : MonoBehaviour
 {
     public GameObject[] stonesUI;
-    public GameObject currentStone;
+    public SelectPebbleButton currentStone;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI bodyText;
     public GameObject textBox;
     public Button pickRockButton;
 
     public RockEvent OnPebbleAddedByPlayer;
-
-    [Header("[TODO] Remove when valid pebbles can be selected from UI")] [SerializeField]
-    private PebbleRegistry registry;
    
     // Start is called before the first frame update
     void Start()
     {
+        //init listener stone to set text
+        stonesUI = GameObject.FindGameObjectsWithTag("PickableStone");
+        foreach (GameObject stone in stonesUI) 
+        {
+            Button stoneButton = stone.GetComponent<Button>();
+            if (stoneButton)
+            {
+                stoneButton.onClick.AddListener(() => textBox.SetActive(true));
+                SelectPebbleButton newSelectedStone = stone.GetComponent<SelectPebbleButton>();
+                if (newSelectedStone) stoneButton.onClick.AddListener(() => UpdateText(newSelectedStone));
+            }
+        }
         
+        // init when selected stone
+        pickRockButton.onClick.RemoveAllListeners();
+        pickRockButton.onClick.AddListener(() => SendRockData());
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        if (stonesUI.Length == 0)
-        {
-            stonesUI = GameObject.FindGameObjectsWithTag("PickableStone");
-            if (stonesUI.Length > 0)
-            {
-                foreach (GameObject stone in stonesUI)
-                {
-                    if (stone.GetComponent<Button>())
-                    {
-                        stone.GetComponent<Button>().onClick.AddListener(() => textBox.SetActive(true));
-                        stone.GetComponent<Button>().onClick.AddListener(() => UpdateText(stone.name, "test",stone));
-                    }
-                }
-            }
-        }
         
     }
 
-    public void UpdateText(string title, string body, GameObject stone) 
+    public void UpdateText(SelectPebbleButton newStone) 
     {
-        SelectPebbleButton buttonManager;
         //update old Select Stone button
-        if (currentStone) {
-            buttonManager = currentStone.GetComponent<SelectPebbleButton>();
-            if (buttonManager) buttonManager.FauxFixController.IsPlaying = false;
-        }
-        currentStone = stone;
+        if (currentStone) currentStone.FauxFixController.IsPlaying = false;
         
         //update new Select Stone button
-        if (currentStone) {
-            buttonManager = currentStone.GetComponent<SelectPebbleButton>();
-            if (buttonManager) buttonManager.FauxFixController.IsPlaying = true;
-        }
+        currentStone = newStone;
+        currentStone.FauxFixController.IsPlaying = true;
         
-        //enable currentStone animation
-        pickRockButton.onClick.RemoveAllListeners();
-        titleText.text = title;
-        bodyText.text = body;
-        pickRockButton.onClick.AddListener(() => SendRockData(stone));
-        pickRockButton.onClick.AddListener(() => gameObject.SetActive(false));
-        pickRockButton.onClick.AddListener(() => textBox.SetActive(false));
+        // update text stone todo: uncomment when we have data text for Pebble
+        // titleText.text = currentStone.Rock.prefabName;
+        // bodyText.text = currentStone.Rock.rockDescription;
     }
 
-    public void SendRockData (GameObject stone) //datas to sendhere
+    public void SendRockData () //datas to sendhere
     {
-        Rock RandomPebble() => registry.Pebbles[Random.Range(0, registry.Pebbles.Count)];
+        // Reset rock selection panel
+        currentStone.FauxFixController.IsPlaying = false;
+        gameObject.SetActive(false);
+        textBox.SetActive(false);
         
-        Debug.Log("Datas sent: "+stone.name);
-        OnPebbleAddedByPlayer?.Raise(RandomPebble());
+        // Debug.Log("Datas sent: "+currentStone.Rock.prefabName);
+        OnPebbleAddedByPlayer?.Raise(currentStone.Rock);
     }
 }
