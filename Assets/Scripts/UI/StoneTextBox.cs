@@ -56,11 +56,11 @@ public class StoneTextBox : MonoBehaviour
     public void UpdateText(SelectPebbleButton newStone) 
     {
         //update old Select Stone button
-        if (currentStone) currentStone.FauxFixController.IsPlaying = false;
+        if (currentStone) currentStone._fauxFixController.IsPlaying = false;
         
         //update new Select Stone button
         currentStone = newStone;
-        currentStone.FauxFixController.IsPlaying = true;
+        currentStone._fauxFixController.IsPlaying = true;
         
         // update text stone todo: uncomment when we have data text for Pebble
         // titleText.text = currentStone.Rock.prefabName;
@@ -70,7 +70,7 @@ public class StoneTextBox : MonoBehaviour
     public void SendRockData () //datas to sendhere
     {
         // Reset rock selection panel
-        if (currentStone) currentStone.FauxFixController.IsPlaying = false;
+        if (currentStone) currentStone._fauxFixController.IsPlaying = false;
         gameObject.SetActive(false);
         textBox.SetActive(false);
         
