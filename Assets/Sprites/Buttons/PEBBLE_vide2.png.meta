@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: baf32edfe2c9f38449855baed8634a5c
+guid: e8075efb80bf7c04f9f1d1241ae1be22
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PEBBLE_retour_0
+      name: PEBBLE_vide2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 860
+        width: 149
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573b265aef96e7e4c9ee4a136fc93ab0
+      internalID: -1551581275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PEBBLE_vide2_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 149
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c6c2d059ec97441a360d3ec643961a
+      internalID: 1387421161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PEBBLE_vide2_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 138
-        height: 143
+        width: 149
+        height: 430
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,50 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d7389a1cb26a5b4d97c31e7626a8fcb
-      internalID: -328688094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PEBBLE_retour_1
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 0
-        width: 138
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a615ca44db88ae14d9770fa12adb6b7a
-      internalID: 395812948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PEBBLE_retour_2
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 0
-        width: 138
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23c6a7e886b27224888b2f398fda4eb2
-      internalID: 1350957746
+      spriteID: cd2c3ebd649606e4496a1c79424e0828
+      internalID: -1747262118
       vertices: []
       indices: 
       edges: []
@@ -194,7 +194,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 1ee738774b1141d4c9d50d9b07113857
     internalID: 0
     vertices: []
     indices: 
@@ -202,9 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PEBBLE_retour_0: -328688094
-      PEBBLE_retour_1: 395812948
-      PEBBLE_retour_2: 1350957746
+      PEBBLE_vide2_0: -1551581275
+      PEBBLE_vide2_1: 1387421161
+      PEBBLE_vide2_2: -1747262118
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

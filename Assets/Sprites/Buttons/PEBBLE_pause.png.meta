@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,10 +36,10 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
@@ -51,7 +51,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d373e0c4e4596ef45af884606d09328f
-      internalID: -1097626208
+      spriteID: 58949202ddf342b4c8d582e3484272b7
+      internalID: -2110549916
       vertices: []
       indices: 
       edges: []
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd7f2a5b0adad7b4fa4008231cdbd827
-      internalID: -701050973
+      spriteID: f6ccaa90ac27de24b90d8a36432a512a
+      internalID: 2009082946
       vertices: []
       indices: 
       edges: []
@@ -185,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7fd343209acd3e4eae9bd1aed10d9d2
-      internalID: -882570162
+      spriteID: bfc4bf83201eb9c48a5a60702794bdc8
+      internalID: -1511046257
       vertices: []
       indices: 
       edges: []
@@ -202,9 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PEBBLE_pause_0: -1097626208
-      PEBBLE_pause_1: -701050973
-      PEBBLE_pause_2: -882570162
+      PEBBLE_pause_0: -2110549916
+      PEBBLE_pause_1: 2009082946
+      PEBBLE_pause_2: -1511046257
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
