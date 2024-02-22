@@ -3,7 +3,9 @@ guid: ccd4cbddd6ed3a14da2ef8a1d17c96b7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - StoneContainerPrefab: {fileID: 5351458907178017564, guid: deea582833140f84292445efa33d1045, type: 3}
+  - registry: {fileID: 11400000, guid: 0b9ac8d1c0e6ac44e9ae34aa4dcd2914, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
