@@ -1,13 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
-using System;
 using ScriptableEvents;
 using TMPro;
-using Random = UnityEngine.Random;
 
 public class StoneTextBox : MonoBehaviour
 {
@@ -30,36 +24,36 @@ public class StoneTextBox : MonoBehaviour
     void Start()
     {
         //init listener stone to set text
-        stonesUI = GameObject.FindGameObjectsWithTag("PickableStone");
-        foreach (GameObject stone in stonesUI) 
-        {
-            Button stoneButton = stone.GetComponent<Button>();
-            if (stoneButton)
-            {
-                stoneButton.onClick.AddListener(() => textBox.SetActive(true));
-                SelectPebbleButton newSelectedStone = stone.GetComponent<SelectPebbleButton>();
-                if (newSelectedStone) stoneButton.onClick.AddListener(() => UpdateText(newSelectedStone));
-            }
-        }
+        // stonesUI = GameObject.FindGameObjectsWithTag("PickableStone");
+        // foreach (GameObject stone in stonesUI) 
+        // {
+        //     Button stoneButton = stone.GetComponent<Button>();
+        //     if (stoneButton)
+        //     {
+        //         stoneButton.onClick.AddListener(() => textBox.SetActive(true));
+        //         SelectPebbleButton newSelectedStone = stone.GetComponent<SelectPebbleButton>();
+        //         if (newSelectedStone) stoneButton.onClick.AddListener(() => UpdateText(newSelectedStone));
+        //     }
+        // }
         
         // init when selected stone
         pickRockButton.onClick.RemoveAllListeners();
         pickRockButton.onClick.AddListener(() => SendRockData());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPebbleSelected(SelectPebbleButton selectedPebble)
     {
-        
+        if (textBox.activeSelf == false) textBox.SetActive(true);
+        UpdateText(selectedPebble);
     }
 
-    public void UpdateText(SelectPebbleButton newStone) 
+    public void UpdateText(SelectPebbleButton selectedPebble) 
     {
         //update old Select Stone button
         if (currentStone) currentStone._fauxFixController.IsPlaying = false;
         
         //update new Select Stone button
-        currentStone = newStone;
+        currentStone = selectedPebble;
         currentStone._fauxFixController.IsPlaying = true;
         
         // update text stone todo: uncomment when we have data text for Pebble

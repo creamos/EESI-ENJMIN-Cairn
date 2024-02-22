@@ -1,3 +1,4 @@
+using ScriptableEvents;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -6,6 +7,9 @@ public class SelectPebbleButton : MonoBehaviour
 {
     [SerializeField]
     private Rock rock;
+
+    [SerializeField] private StoneSelectButtonEvent OnPebbleSelected;
+    
     public Rock Rock 
     { 
         get => rock;
@@ -39,6 +43,6 @@ public class SelectPebbleButton : MonoBehaviour
     }
 
     public void OnActiveButton() {
-       
+        OnPebbleSelected?.Raise(this);
     }
 }
