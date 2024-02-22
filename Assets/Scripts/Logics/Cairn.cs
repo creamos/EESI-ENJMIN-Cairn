@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableEvents;
 using UnityEngine;
 
 public class Cairn : MonoBehaviour
@@ -29,6 +30,8 @@ public class Cairn : MonoBehaviour
     private int floorNb =0;
 
     public int floorWidth = 9;
+
+    public GameEvent OnCairnModified;
 
     // Polish code du cern pour reorganiser cailloux d'un etage avec les gros au milieu ou aleatoirement
 
@@ -159,6 +162,8 @@ public class Cairn : MonoBehaviour
     public void AddRock(Rock rock){
         rocksInCairn.Add(rock);
         FindRockPlace(rock);
+
+        OnCairnModified?.Raise();
     }
 
     public void RemoveRandomRock(){

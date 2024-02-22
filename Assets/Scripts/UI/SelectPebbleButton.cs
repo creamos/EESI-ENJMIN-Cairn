@@ -38,6 +38,6 @@ public class SelectPebbleButton : MonoBehaviour
     }
 
     public void OnActiveButton() {
-        if (FauxFixController) FauxFixController.IsPlaying = !FauxFixController.IsPlaying;
+       
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Rock")]
+[CreateAssetMenu(menuName = "Pebbles/Pebble Data")]
 public class Rock : ScriptableObject
 {
     public string prefabName;
