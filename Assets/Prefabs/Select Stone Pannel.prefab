@@ -349,7 +349,7 @@ MonoBehaviour:
   bodyText: {fileID: 3804877687797873943}
   textBox: {fileID: 3804877688157542869}
   pickRockButton: {fileID: 3804877688682739437}
-  OnPebbleAddedByPlayer: {fileID: 0}
+  OnPebbleAddedByPlayer: {fileID: 11400000, guid: 27372bba796fcd44f9e701b5f51d76fe, type: 2}
 --- !u!1 &3804877687957615690
 GameObject:
   m_ObjectHideFlags: 0

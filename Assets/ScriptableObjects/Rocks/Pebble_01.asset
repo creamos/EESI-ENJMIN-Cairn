@@ -19,7 +19,7 @@ MonoBehaviour:
 
     Over and
     over'
-  rockWidth: 2
+  rockWidth: 1
   RockAudioCLip: {fileID: 8300000, guid: b91be64ef9e17704c9b8974991969d4e, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 859511626dfe6be48af9252c29d96a8e, type: 2}
   FrameList:

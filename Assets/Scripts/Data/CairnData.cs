@@ -11,11 +11,11 @@ public class CairnData : ScriptableObject
 
     public PebbleRegistry registry;
     public int cairnWidth = 9;
-    [HideInInspector] public float canvasWidth = 1024;
+    [NonSerialized] public float canvasWidth = 1024;
     public Action OnCanvasWidthUpdated;
     public FloatEvent OnCanvasWidthUpdatedEvent;
 
-    [HideInInspector] public List<int> loadedPebbleIDs;
+    [NonSerialized] public List<int> loadedPebbleIDs;
     
     public void Load()
     {
