@@ -796,7 +796,6 @@ MonoBehaviour:
   textBox: {fileID: 857758350}
   pickRockButton: {fileID: 1559147958}
   OnPebbleAddedByPlayer: {fileID: 11400000, guid: 27372bba796fcd44f9e701b5f51d76fe, type: 2}
-  registry: {fileID: 11400000, guid: 0b9ac8d1c0e6ac44e9ae34aa4dcd2914, type: 2}
 --- !u!1 &254069804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,7 +2666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9301d8e144b469a489847e3902d76f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollArea: {fileID: 0}
   scrollbar: {fileID: 1147662276}
 --- !u!224 &1068624509 stripped
 RectTransform:
@@ -4760,6 +4758,18 @@ PrefabInstance:
     - target: {fileID: 129057324788664428, guid: 1bfe73b96fd6ab04da7c876ffcf66084, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129057324788664430, guid: 1bfe73b96fd6ab04da7c876ffcf66084, type: 3}
+      propertyPath: m_ChildScaleWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129057324788664430, guid: 1bfe73b96fd6ab04da7c876ffcf66084, type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129057324788664430, guid: 1bfe73b96fd6ab04da7c876ffcf66084, type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bfe73b96fd6ab04da7c876ffcf66084, type: 3}

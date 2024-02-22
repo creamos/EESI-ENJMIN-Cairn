@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   registry: {fileID: 11400000, guid: 0b9ac8d1c0e6ac44e9ae34aa4dcd2914, type: 2}
   cairnWidth: 9
-  canvasWidth: 1024
+  canvasWidth: 675
   OnCanvasWidthUpdatedEvent: {fileID: 11400000, guid: 64db846fca69f3b4a8cd8c8fc6894500, type: 2}
-  loadedPebbleIDs: 
+  loadedPebbleIDs: 190000002700000010000000290000000c0000001c00000026000000040000002b0000000000000023000000000000000000000000000000

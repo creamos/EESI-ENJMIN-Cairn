@@ -41,6 +41,7 @@ public class CairnVisualizer : MonoBehaviour
 
     public void Rebuild()
     {
+        Canvas.ForceUpdateCanvases();
         float canvasWidth = layersContainer.rect.width*.9f;
         cairnData?.SetCanvasWidth(canvasWidth); 
         
