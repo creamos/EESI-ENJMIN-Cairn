@@ -64,7 +64,7 @@ public class StoneTextBox : MonoBehaviour
     public void SendRockData () //datas to sendhere
     {
         // Reset rock selection panel
-        currentStone.FauxFixController.IsPlaying = false;
+        if (currentStone) currentStone.FauxFixController.IsPlaying = false;
         gameObject.SetActive(false);
         textBox.SetActive(false);
         
