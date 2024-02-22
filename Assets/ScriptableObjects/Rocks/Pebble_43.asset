@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_43
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Estranged
+  rockDescription: 'Dear forget-me-not,
+
+    Traveler in deep despair
+
+    Our
+    lifetimes, once crossed'
   rockWidth: 7
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 75acce45ef738c54d95d1c82c6dc16ce, type: 2}

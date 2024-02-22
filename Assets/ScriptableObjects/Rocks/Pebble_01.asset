@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_01
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Obsession
+  rockDescription: 'You run restlessly
+
+    Pursuing an unique goal
+
+    Over and
+    over'
   rockWidth: 2
-  RockAudioCLip: {fileID: 8300000, guid: 848dcac796d1ebd49ba6e73b4c761c9d, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: b91be64ef9e17704c9b8974991969d4e, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 859511626dfe6be48af9252c29d96a8e, type: 2}
   FrameList:
   - {fileID: 1332790626, guid: a029ea7ae31f690459cd6a3719e7a8c3, type: 3}

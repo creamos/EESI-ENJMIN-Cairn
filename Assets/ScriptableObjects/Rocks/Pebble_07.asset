@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_07
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Frenzy
+  rockDescription: 'Tiny stuff making
+
+    A light rumble, like steps
+
+    Endless
+    and around'
   rockWidth: 2
   RockAudioCLip: {fileID: 8300000, guid: 96c6dca97e62b3a4b97ba12fba5af0ec, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 58f89cba2fc37444fb8264a162f91422, type: 2}

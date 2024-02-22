@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_31
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Past
+  rockDescription: "Sometimes I remember \r\nThat their feet touched the same ground\r\nAs
+    mine "
   rockWidth: 3
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 9628b51a87348a64f8611b28ad9d8878, type: 2}

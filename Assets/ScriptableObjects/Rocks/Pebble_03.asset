@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_03
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Nostalgia
+  rockDescription: 'When the place was here
+
+    And the time was now'
   rockWidth: 1
   RockAudioCLip: {fileID: 8300000, guid: 12b245d9fc8b74149ab0d1b37f5c74a4, type: 3}
   RockAnimClip: {fileID: 7400000, guid: d1e933c32bc7a1145bcdc1da647845bb, type: 2}

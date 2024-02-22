@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_02
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Devotion
+  rockDescription: "Everyday I knel and prey\r\nHoping that one day\r\nYou will see
+    me again \r"
   rockWidth: 1
   RockAudioCLip: {fileID: 8300000, guid: a90de1eec0cb10e40aa5fd41ea5fdc9d, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 08291c1ba5de10644898fed44df8726d, type: 2}

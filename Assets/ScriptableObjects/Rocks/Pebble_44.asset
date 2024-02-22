@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
   m_Name: Pebble_44
   m_EditorClassIdentifier: 
-  prefabName: 
-  rockDescription: 
+  prefabName: Time
+  rockDescription: 'The landscapes flow
+
+    Like the mechanical wheel
+
+    Giving
+    birth to take it back'
   rockWidth: 7
   RockAudioCLip: {fileID: 0}
   RockAnimClip: {fileID: 7400000, guid: 9c0a1a57c739cbb41802b045c6b93df0, type: 2}
