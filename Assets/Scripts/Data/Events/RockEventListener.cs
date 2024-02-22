@@ -1,3 +1,4 @@
-using ScriptableEvents;
-
-public class RockEventListener : EventListener<Rock> { }
+namespace ScriptableEvents
+{
+    public class RockEventListener : EventListener<Rock> {}
+}

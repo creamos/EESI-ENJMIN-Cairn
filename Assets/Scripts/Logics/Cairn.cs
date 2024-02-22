@@ -24,12 +24,13 @@ public class Cairn : MonoBehaviour
 
     //  0 1 2 3 4 
 
+    [SerializeField] private CairnData cairnData;
     private List<Rock> rocksInCairn = new List<Rock>();
     private List<bool> spaces = new List<bool>();
     private List<int[]> rocksInCairnCoords = new List<int[]>();
     private int floorNb =0;
 
-    public int floorWidth = 9;
+    public int floorWidth => cairnData ? cairnData.cairnWidth : 9;
 
     public GameEvent OnCairnModified;
 
@@ -159,10 +160,16 @@ public class Cairn : MonoBehaviour
         FillCairnWithOrderedRockList();
     }
 
-    public void AddRock(Rock rock){
+    public void AddRock(Rock rock)
+    {
+        AddRock(rock, true);
+    }
+    
+    public void AddRock(Rock rock, bool save){
         rocksInCairn.Add(rock);
         FindRockPlace(rock);
 
+        if (save) Save();
         OnCairnModified?.Raise();
     }
 
@@ -200,5 +207,28 @@ public class Cairn : MonoBehaviour
 
     public int GetFloorNumber(){
         return floorNb;
+    }
+
+    public void Save()
+    {
+        List<Rock> pebbles = new List<Rock>();
+        int layersCount = GetFloorNumber();
+        for (int layerID = 0; layerID < layersCount; layerID++)
+        {
+            Rock[] rocks = GetRocks(layerID);
+            int pebbleIndex = 0;
+            while(pebbleIndex < rocks.Length)
+            {
+                Rock pebble = rocks[pebbleIndex];
+                if (pebble != null)
+                {
+                    pebbles.Add(pebble);
+                    pebbleIndex += pebble.rockWidth;
+                }
+                else pebbleIndex++;
+            }
+        }
+        
+        cairnData.Save(pebbles.ToArray());
     }
 }

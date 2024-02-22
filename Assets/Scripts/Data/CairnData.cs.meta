@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: a5648a12136dafe45a50e061790ab771
+guid: 9ec4ac7031e842746845af420c69cb58
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - cairnData: {fileID: 11400000, guid: ecd1e3d1384d927448a2d87d3d63dc10, type: 2}
   - registry: {fileID: 11400000, guid: 0b9ac8d1c0e6ac44e9ae34aa4dcd2914, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

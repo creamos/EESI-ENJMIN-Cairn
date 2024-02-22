@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CairnVisualizer : MonoBehaviour
 {
+    [SerializeField] private CairnData cairnData;
     [SerializeField] private Cairn cairnManager;
     [SerializeField] private PebbleLayer pebbleLayerPrefab;
     [SerializeField] private RectTransform layersContainer;
@@ -40,6 +41,9 @@ public class CairnVisualizer : MonoBehaviour
 
     public void Rebuild()
     {
+        float canvasWidth = layersContainer.rect.width*.9f;
+        cairnData?.SetCanvasWidth(canvasWidth); 
+        
         if (!cairnManager)
         {
             Debug.LogWarning($"{nameof(CairnVisualizer)}: No {nameof(Cairn)} referenced. " +
