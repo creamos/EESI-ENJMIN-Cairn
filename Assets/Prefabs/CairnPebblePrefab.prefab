@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5481839001699582077}
   - component: {fileID: 4059479791071482449}
   - component: {fileID: 1734844853665974632}
-  - component: {fileID: 6934825704417839007}
+  - component: {fileID: 7750403888142167814}
   m_Layer: 5
   m_Name: CairnPebblePrefab
   m_TagString: Untagged
@@ -321,23 +321,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6934825704417839007
+--- !u!114 &7750403888142167814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8991616615363354717}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Script: {fileID: 11500000, guid: fba27f8e5374e4e4ead38f0f501c137b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
+  Event: {fileID: 11400000, guid: 5ad39c84f1f862d488861f653e8611eb, type: 2}
+  OnEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8507817130265105575}
+        m_TargetAssemblyTypeName: CairnPebbleButton, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

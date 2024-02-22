@@ -82,7 +82,7 @@ public class CairnPebbleButton : MonoBehaviour
         else Deactivate();
     }
 
-    private void Activate()
+    public void Activate()
     {
         if (fauxFix) fauxFix.IsPlaying = true;
         audioSource.Play();
@@ -90,7 +90,7 @@ public class CairnPebbleButton : MonoBehaviour
         OnActivatedEvent?.Raise(Data);
     }
 
-    private void Deactivate()
+    public void Deactivate()
     {
         if (fauxFix) fauxFix.IsPlaying = false;
         audioSource.Stop();
