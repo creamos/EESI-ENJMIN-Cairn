@@ -90,5 +90,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoneButtonPrefab: {fileID: 4913626782336100912, guid: 71fd544a397a0cd4ab297d2f7b06741b, type: 3}
-  minWightButton: 80
-  heightButton: 80
+  minWightButton: 65
+  heightButton: 65

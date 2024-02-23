@@ -5,24 +5,25 @@ using UnityEngine;
 public class RowStone : MonoBehaviour
 {
 	public SelectPebbleButton StoneButtonPrefab;
-	public float minWightButton = 80;
-	public float heightButton = 80;
+	public float minWightButton = 70;
+	public float heightButton = 70;
 
 	private static List<Rock> ExistingRockList = new List<Rock>();
 
-	public void SetupRowStone(Rock[] rockList, float rockWight, float rockHeight) {
+	public void SetupRowStone(Rock[] rockList, float panelWight, float panelHeight) {
 		if (StoneButtonPrefab) {
 			Rock selectedRock = RandomSelectionStone(rockList);
 			float wightButton = minWightButton * selectedRock.rockWidth;
-			float randX = Random.Range(0, rockHeight - heightButton/2);
-			float randY = Random.Range(0, rockWight - wightButton/2);
+			float randWight = panelWight - wightButton;
+			float randHeight = panelHeight - heightButton;
+			float randX = Random.Range(0, randWight);
+			float randY = Random.Range(0, randHeight);
 			SelectPebbleButton rockButton = Instantiate(StoneButtonPrefab, transform);
 			rockButton.Rock = selectedRock;
 			rockButton.UpdateImage();
 			RectTransform tr = rockButton.transform as RectTransform;
 			if (tr) {
-				Vector3 position = tr.localPosition;
-				tr.localPosition = new Vector3(position.x + randX, position.y + randY, 0);
+				tr.localPosition = new Vector3(randX, -randY, 0);
 				tr.sizeDelta = new Vector2(wightButton, heightButton);
 			}
 		}

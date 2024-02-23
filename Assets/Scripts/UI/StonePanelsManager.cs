@@ -41,7 +41,7 @@ public class StonePanelsManager : MonoBehaviour
                         rowTr.localPosition = new Vector3(position.x, position.y - i * rowSize, position.z);
                             
                         rowTr.sizeDelta = new Vector2(rowTr.sizeDelta.x, rowSize);
-                        if (registry.Pebbles.Count != 0) panel.SetupRowStone(registry.Pebbles.ToArray(), rowTr.sizeDelta.x, rowSize);
+                        if (registry.Pebbles.Count != 0) panel.SetupRowStone(registry.Pebbles.ToArray(), vBoxTr.rect.width, rowSize);
                     }
                     _panels.Add(panel);
                 }
