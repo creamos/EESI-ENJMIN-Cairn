@@ -31,6 +31,7 @@ public class StonePanelsManager : MonoBehaviour
             RectTransform vBoxTr = transform as RectTransform;
             if (vBoxTr) {
                 float rowSize = vBoxTr.rect.height / numberOfContainers;
+                RowStone.ClearExistingRockList();
                 for (int i = 0; i < numberOfContainers; i++)
                 {
                     RowStone panel = Instantiate(StoneContainerPrefab, transform);
