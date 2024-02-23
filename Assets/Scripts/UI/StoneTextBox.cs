@@ -3,12 +3,16 @@ using UnityEngine.UI;
 using ScriptableEvents;
 using TMPro;
 
+[RequireComponent(typeof(AudioSource))]
 public class StoneTextBox : MonoBehaviour
 {
-    public GameObject[] stonesUI;
+    // public GameObject[] stonesUI;
     public SelectPebbleButton currentStone;
-    public TextMeshProUGUI titleText;
-    public TextMeshProUGUI bodyText;
+    // public TextMeshProUGUI titleText;
+    // public TextMeshProUGUI bodyText;
+
+    private AudioSource audioSource;
+    
     public GameObject textBox;
     public Button pickRockButton;
 
@@ -18,24 +22,12 @@ public class StoneTextBox : MonoBehaviour
     private void OnEnable()
     {
         OnPanelOpened?.Raise();
+        audioSource ??= GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //init listener stone to set text
-        // stonesUI = GameObject.FindGameObjectsWithTag("PickableStone");
-        // foreach (GameObject stone in stonesUI) 
-        // {
-        //     Button stoneButton = stone.GetComponent<Button>();
-        //     if (stoneButton)
-        //     {
-        //         stoneButton.onClick.AddListener(() => textBox.SetActive(true));
-        //         SelectPebbleButton newSelectedStone = stone.GetComponent<SelectPebbleButton>();
-        //         if (newSelectedStone) stoneButton.onClick.AddListener(() => UpdateText(newSelectedStone));
-        //     }
-        // }
-        
         // init when selected stone
         pickRockButton.onClick.RemoveAllListeners();
         pickRockButton.onClick.AddListener(() => SendRockData());
@@ -45,6 +37,17 @@ public class StoneTextBox : MonoBehaviour
     {
         if (textBox.activeSelf == false) textBox.SetActive(true);
         UpdateText(selectedPebble);
+        PlayAudio(selectedPebble);
+    }
+
+    private void PlayAudio(SelectPebbleButton selectedPebble)
+    {
+        if (audioSource)
+        {
+            audioSource.Stop();
+            audioSource.clip = selectedPebble.Rock.RockAudioCLip;
+            audioSource.Play();
+        }
     }
 
     public void UpdateText(SelectPebbleButton selectedPebble) 
@@ -67,6 +70,7 @@ public class StoneTextBox : MonoBehaviour
         if (currentStone) currentStone._fauxFixController.IsPlaying = false;
         gameObject.SetActive(false);
         textBox.SetActive(false);
+        audioSource.Stop();
         
         // Debug.Log("Datas sent: "+currentStone.Rock.prefabName);
         OnPebbleAddedByPlayer?.Raise(currentStone.Rock);
