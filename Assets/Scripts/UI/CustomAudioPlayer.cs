@@ -1,20 +1,18 @@
 using System;
+using ScriptableEvents;
 using UnityEngine;
+using UnityEngine.Audio;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(AudioSource))]
 public class CustomAudioPlayer : MonoBehaviour
 {
     public AudioClip[] audioClips = {};
     public bool isPitchModulated = true;
+    public AudioMixerGroup mixGroup;
     
-    private AudioSource source;
     private int[] pentatonicSemitones = { 0, 2, 4, 7, 9 };
-    
-    private void OnEnable()
-    {
-        source ??= GetComponent<AudioSource>();
-    }
+
+    [SerializeField] private AudioRequestEvent OnAudioRequested;
 
     public void Play()
     {
@@ -25,21 +23,20 @@ public class CustomAudioPlayer : MonoBehaviour
 
     public void Play(AudioClip clip)
     {
-        if (!source) return;
+        float pitch = 1f;
+        if (isPitchModulated) pitch = ModulatePitch(pitch);
         
-        source.Stop();
-        if (isPitchModulated) ModulatePitch();
-        source.clip = clip;
-        source.Play();
+        OnAudioRequested?.Raise(new AudioRequestData(clip, pitch, mixGroup));
     }
 
-    private void ModulatePitch()
+    private float ModulatePitch(float pitch)
     {
-        source.pitch = 1;
         int semitoneOffset = pentatonicSemitones[Random.Range(0, pentatonicSemitones.Length)];
         for (int i = 0; i < semitoneOffset; i++)
         {
-            source.pitch *= 1.059463f;
+            pitch *= 1.059463f;
         }
+
+        return pitch;
     }
 }
