@@ -8,8 +8,8 @@ public class StoneTextBox : MonoBehaviour
 {
     // public GameObject[] stonesUI;
     public SelectPebbleButton currentStone;
-    // public TextMeshProUGUI titleText;
-    // public TextMeshProUGUI bodyText;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI bodyText;
 
     private AudioSource audioSource;
     
@@ -60,8 +60,8 @@ public class StoneTextBox : MonoBehaviour
         currentStone._fauxFixController.IsPlaying = true;
         
         // update text stone todo: uncomment when we have data text for Pebble
-        // titleText.text = currentStone.Rock.prefabName;
-        // bodyText.text = currentStone.Rock.rockDescription;
+        titleText.text = currentStone.Rock.prefabName;
+        bodyText.text = currentStone.Rock.rockDescription;
     }
 
     public void SendRockData () //datas to sendhere

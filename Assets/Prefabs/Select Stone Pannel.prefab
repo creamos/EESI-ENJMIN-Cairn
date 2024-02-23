@@ -845,6 +845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStone: {fileID: 0}
+  titleText: {fileID: 3804877689565201674}
+  bodyText: {fileID: 3804877687797873943}
   textBox: {fileID: 3804877688157542869}
   pickRockButton: {fileID: 3804877688682739437}
   OnPebbleAddedByPlayer: {fileID: 11400000, guid: 27372bba796fcd44f9e701b5f51d76fe, type: 2}
@@ -1158,6 +1160,7 @@ GameObject:
   - component: {fileID: 3804877688171558529}
   - component: {fileID: 3286758748561402590}
   - component: {fileID: 7919622411646788911}
+  - component: {fileID: 8455312352933996654}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -1267,6 +1270,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8455312352933996654}
+        m_TargetAssemblyTypeName: CustomAudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3804877687822195744}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1351,6 +1366,23 @@ MonoBehaviour:
   - {fileID: 1350957746, guid: baf32edfe2c9f38449855baed8634a5c, type: 3}
   fps: 6
   isPlaying: 0
+--- !u!114 &8455312352933996654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3804877688171558531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501def48ad6a30849815efd66d09c266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: d2dc39c312218d949bc1a64c3ea5c743, type: 3}
+  isPitchModulated: 1
+  mixGroup: {fileID: 2585800757566255766, guid: 8ad5263d43bd08943a696cefff21e782, type: 2}
+  OnAudioRequested: {fileID: 11400000, guid: 5476d689e8489d5428f3c54c1af36b8b, type: 2}
 --- !u!1 &3804877688235428074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1607,7 @@ GameObject:
   - component: {fileID: 3804877688682739436}
   - component: {fileID: 3804877688682739437}
   - component: {fileID: 7940918937466157510}
+  - component: {fileID: 2518887495685841893}
   m_Layer: 5
   m_Name: Pick Stone Button
   m_TagString: Untagged
@@ -1685,7 +1718,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3804877687822195744}
+      - m_Target: {fileID: 2518887495685841893}
+        m_TargetAssemblyTypeName: CustomAudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1697,7 +1742,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3804877688157542869}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1751,6 +1796,24 @@ MonoBehaviour:
   - {fileID: 145538713, guid: 7e33c8c0f17c4f14f9bf3d151a6eca89, type: 3}
   fps: 6
   isPlaying: 1
+--- !u!114 &2518887495685841893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3804877688682739439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501def48ad6a30849815efd66d09c266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: f201093e9633e4444ab417e278bb52f1, type: 3}
+  - {fileID: 8300000, guid: d2dc39c312218d949bc1a64c3ea5c743, type: 3}
+  isPitchModulated: 1
+  mixGroup: {fileID: 2585800757566255766, guid: 8ad5263d43bd08943a696cefff21e782, type: 2}
+  OnAudioRequested: {fileID: 11400000, guid: 5476d689e8489d5428f3c54c1af36b8b, type: 2}
 --- !u!1 &3804877689497245326
 GameObject:
   m_ObjectHideFlags: 0
