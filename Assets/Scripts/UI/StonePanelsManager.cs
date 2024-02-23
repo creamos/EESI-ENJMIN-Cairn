@@ -12,15 +12,19 @@ public class StonePanelsManager : MonoBehaviour
 
 
     private void Start() {
-        //clear VBox
-         if (_panels.Count > 0) {
-             foreach (RowStone panel in _panels) 
-                 Destroy(panel.gameObject);
-                 // UnityEditor.EditorApplication.delayCall+=() => DestroyImmediate(panel.gameObject);
-             _panels.Clear();
-         }
+        PopulateRockSelection();
+    }
 
-         SelectionStones();
+    public void PopulateRockSelection() {
+        //clear VBox
+        if (_panels.Count > 0) {
+            foreach (RowStone panel in _panels) 
+                Destroy(panel.gameObject);
+            // UnityEditor.EditorApplication.delayCall+=() => DestroyImmediate(panel.gameObject);
+            _panels.Clear();
+        }
+
+        SelectionStones();
     }
 
     public void SelectionStones() {
