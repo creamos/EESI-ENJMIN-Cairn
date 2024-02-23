@@ -15,7 +15,7 @@ MonoBehaviour:
   prefabName: Revolution
   rockDescription: "Steal, burn, kill\r\nas nothing gets done without \r\nviolence "
   rockWidth: 7
-  RockAudioCLip: {fileID: 0}
+  RockAudioCLip: {fileID: 8300000, guid: a90de1eec0cb10e40aa5fd41ea5fdc9d, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 355dd3d9ff79d804d8d63d560ad25c87, type: 2}
   FrameList:
   - {fileID: 990257713, guid: 1affe6452379fa84982f898dd7535d12, type: 3}

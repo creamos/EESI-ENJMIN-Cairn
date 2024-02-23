@@ -16,7 +16,7 @@ MonoBehaviour:
   rockDescription: "Sometimes, a lit spark \r\nor a fire makes a thing\r\ninto someone's
     home"
   rockWidth: 2
-  RockAudioCLip: {fileID: 8300000, guid: 6069dceb5b1cbf44b956799cab058f59, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: 6f44eb015efa9384bb65eccda5a2cdb9, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 3c1bd8f4395ee6f439ce08798bf9d256, type: 2}
   FrameList:
   - {fileID: 1154297588, guid: 658017514154c6a43964584a5b41d244, type: 3}

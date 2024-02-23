@@ -20,7 +20,7 @@ MonoBehaviour:
     At several
     times the speed of sound'
   rockWidth: 2
-  RockAudioCLip: {fileID: 0}
+  RockAudioCLip: {fileID: 8300000, guid: 79156f19d974ae94490bc02668982244, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 2ca88ab15a6a73c4ea6216705cc7aa69, type: 2}
   FrameList:
   - {fileID: 2142729336, guid: 341984943ffb4274ab8838d6b5a7a70b, type: 3}

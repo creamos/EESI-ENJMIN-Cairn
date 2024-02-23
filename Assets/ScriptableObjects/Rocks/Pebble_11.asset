@@ -20,7 +20,7 @@ MonoBehaviour:
 
     Like a small knife, in your bedroom'
   rockWidth: 2
-  RockAudioCLip: {fileID: 8300000, guid: 39fafd3799098814eb9c4be688811721, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: 495897867e0f9af419ccdffe65cdac6f, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 64d012dec489b5447add7aa0f4cc032a, type: 2}
   FrameList:
   - {fileID: -376945851, guid: 84ad1f99b10963b40a9ce97a77ea784d, type: 3}

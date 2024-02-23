@@ -17,7 +17,7 @@ MonoBehaviour:
 
     And realize how big I am'
   rockWidth: 7
-  RockAudioCLip: {fileID: 0}
+  RockAudioCLip: {fileID: 8300000, guid: 41ac4414c92d2dd4cb9d98d267d094d4, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 739d933cde6aa114f8b0ff1e09fe963f, type: 2}
   FrameList:
   - {fileID: -127741281, guid: c083a67bcd5716246969d14ceb4ca7bb, type: 3}

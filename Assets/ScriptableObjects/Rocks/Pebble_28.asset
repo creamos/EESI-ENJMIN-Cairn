@@ -20,7 +20,7 @@ MonoBehaviour:
     How it was being
     alive'
   rockWidth: 3
-  RockAudioCLip: {fileID: 0}
+  RockAudioCLip: {fileID: 8300000, guid: ee4ec4f01f835204abe4241dc50cf2c6, type: 3}
   RockAnimClip: {fileID: 7400000, guid: fb787f2193eb4994686d557825cccba1, type: 2}
   FrameList:
   - {fileID: -1279381771, guid: 9fa8199066b24dc4a9a51f7c1874958a, type: 3}

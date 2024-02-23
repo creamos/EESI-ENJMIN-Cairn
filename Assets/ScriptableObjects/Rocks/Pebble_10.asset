@@ -20,7 +20,7 @@ MonoBehaviour:
     Whenever
     one''s looking yonder'
   rockWidth: 2
-  RockAudioCLip: {fileID: 8300000, guid: 1b5969386ce6dfd4596a046be2e564bc, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: 729c601c03869bc4299b543598e3c147, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 49ac0f1a0c2125344b8fedc62787d780, type: 2}
   FrameList:
   - {fileID: -227582168, guid: 2b73d162d53249e438c1c40ac1ae9a4b, type: 3}

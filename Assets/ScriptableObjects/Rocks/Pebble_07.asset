@@ -20,7 +20,7 @@ MonoBehaviour:
     Endless
     and around'
   rockWidth: 2
-  RockAudioCLip: {fileID: 8300000, guid: 96c6dca97e62b3a4b97ba12fba5af0ec, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: 93a3c6f8a6297fc428e649d7ac1d601c, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 58f89cba2fc37444fb8264a162f91422, type: 2}
   FrameList:
   - {fileID: -2052969367, guid: 2181cccf6b267e242a665998ab17900c, type: 3}

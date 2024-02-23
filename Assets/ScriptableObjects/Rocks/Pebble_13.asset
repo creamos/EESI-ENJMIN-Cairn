@@ -17,10 +17,10 @@ MonoBehaviour:
 
     Joy in repetition
 
-    Sharpening of
-    the Self'
+    Sharpening of the
+    Self'
   rockWidth: 2
-  RockAudioCLip: {fileID: 8300000, guid: 4750852e223343c42b8d3c5a3659dd45, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: 12b245d9fc8b74149ab0d1b37f5c74a4, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 2d37c07b4ac6add42b3ae25377b85c86, type: 2}
   FrameList:
   - {fileID: -96645819, guid: 99c5898bd81c6f146b389749f44b0ebb, type: 3}

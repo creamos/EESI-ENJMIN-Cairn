@@ -20,7 +20,7 @@ MonoBehaviour:
     Of what''s
     coming up'
   rockWidth: 2
-  RockAudioCLip: {fileID: 8300000, guid: ee4ec4f01f835204abe4241dc50cf2c6, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: a5fd45c9a95c37e40b922051fb7aee2e, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 9bcfd21547926f447b8020d490d52eb3, type: 2}
   FrameList:
   - {fileID: -1904521000, guid: 4b90bc6587892cc43ab685521b0896cc, type: 3}

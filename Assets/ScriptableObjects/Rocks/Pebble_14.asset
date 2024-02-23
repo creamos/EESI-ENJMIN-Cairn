@@ -20,7 +20,7 @@ MonoBehaviour:
     What
     kind of stuff will fall '
   rockWidth: 2
-  RockAudioCLip: {fileID: 8300000, guid: c08c1002b1ea8234db3d05bb9d42e935, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: 08f9f78b898cf5c4881504910a59e2a3, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 7998dabaa20f9f8499143f6d301368c5, type: 2}
   FrameList:
   - {fileID: -196148763, guid: 384500d1680fdec4d9b880ddeb50d874, type: 3}

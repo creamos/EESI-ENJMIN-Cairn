@@ -16,7 +16,7 @@ MonoBehaviour:
   rockDescription: "Everyday I knel and prey\r\nHoping that one day\r\nYou will see
     me again \r"
   rockWidth: 1
-  RockAudioCLip: {fileID: 8300000, guid: a90de1eec0cb10e40aa5fd41ea5fdc9d, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: 9ce456c233f1ad24b984bff789301564, type: 3}
   RockAnimClip: {fileID: 7400000, guid: 08291c1ba5de10644898fed44df8726d, type: 2}
   FrameList:
   - {fileID: 2014340180, guid: 741baa61002c31a4da20d28a6fc744fa, type: 3}

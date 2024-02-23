@@ -20,7 +20,7 @@ MonoBehaviour:
     What
     will remain?'
   rockWidth: 1
-  RockAudioCLip: {fileID: 8300000, guid: 79156f19d974ae94490bc02668982244, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: 6f3690856a5ee08499f6086e9ff5441e, type: 3}
   RockAnimClip: {fileID: 7400000, guid: eacf3c4d3f8ef6b4fb4eb051fa844663, type: 2}
   FrameList:
   - {fileID: 760069875, guid: e417b9940799bce4885baf91d39d3837, type: 3}

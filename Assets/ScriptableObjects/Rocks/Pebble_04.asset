@@ -20,7 +20,7 @@ MonoBehaviour:
 
     And a song is reborn'
   rockWidth: 1
-  RockAudioCLip: {fileID: 8300000, guid: 08f9f78b898cf5c4881504910a59e2a3, type: 3}
+  RockAudioCLip: {fileID: 8300000, guid: c9c109eb549a2464e9ebd01c613e9236, type: 3}
   RockAnimClip: {fileID: 7400000, guid: e89e16331fa0296468a45eb98cfea48a, type: 2}
   FrameList:
   - {fileID: 1899659177, guid: b5e78e1b5a9982a4b802561d4417c1a2, type: 3}
