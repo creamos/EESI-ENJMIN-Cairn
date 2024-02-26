@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
+  m_Name: Pebble_43
+  m_EditorClassIdentifier: 
+  prefabName: Time
+  rockDescription: 'The landscapes flow
+
+    Like the mechanical wheel
+
+    Giving
+    birth to take it back'
+  rockWidth: 7
+  RockAudioCLip: {fileID: 8300000, guid: 4750852e223343c42b8d3c5a3659dd45, type: 3}
+  RockAnimClip: {fileID: 7400000, guid: 9c0a1a57c739cbb41802b045c6b93df0, type: 2}
+  FrameList:
+  - {fileID: 2066122570, guid: e2268a7de650bb04ebc7a51c1877de2f, type: 3}
+  - {fileID: -1423212895, guid: e2268a7de650bb04ebc7a51c1877de2f, type: 3}
+  - {fileID: -1828097, guid: e2268a7de650bb04ebc7a51c1877de2f, type: 3}

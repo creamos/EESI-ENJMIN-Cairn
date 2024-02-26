@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
+  m_Name: Pebble_40
+  m_EditorClassIdentifier: 
+  prefabName: Shark
+  rockDescription: 'Can you feel the rhythm,
+
+    The waves re-enacting,
+
+    Your
+    sorrow'
+  rockWidth: 5
+  RockAudioCLip: {fileID: 8300000, guid: 2d0272771d83052428a8b288ca482f7f, type: 3}
+  RockAnimClip: {fileID: 7400000, guid: 3ecc805d242ca1d459da40651c523cb2, type: 2}
+  FrameList:
+  - {fileID: -498865780, guid: ebd82568aad08e1408f5b792e6580963, type: 3}
+  - {fileID: -521739158, guid: ebd82568aad08e1408f5b792e6580963, type: 3}
+  - {fileID: -1805131008, guid: ebd82568aad08e1408f5b792e6580963, type: 3}

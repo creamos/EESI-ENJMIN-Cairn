@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
+  m_Name: Pebble_34
+  m_EditorClassIdentifier: 
+  prefabName: Anticipation
+  rockDescription: "Facing the void,\nDo you fear it\r,\nOr welcome it"
+  rockWidth: 4
+  RockAudioCLip: {fileID: 8300000, guid: 96c6dca97e62b3a4b97ba12fba5af0ec, type: 3}
+  RockAnimClip: {fileID: 7400000, guid: 5fe8967e2b511144f99082de6172f855, type: 2}
+  FrameList:
+  - {fileID: 2034705265, guid: bf940c82284c04d478da81d47b8b8332, type: 3}
+  - {fileID: -336551622, guid: bf940c82284c04d478da81d47b8b8332, type: 3}
+  - {fileID: -1129992349, guid: bf940c82284c04d478da81d47b8b8332, type: 3}

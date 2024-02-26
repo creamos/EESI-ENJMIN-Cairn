@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
+  m_Name: Pebble_30
+  m_EditorClassIdentifier: 
+  prefabName: Lookalike
+  rockDescription: "D\xE9j\xE0-vu,\nYou already passed by this tree,\nOr did you?"
+  rockWidth: 3
+  RockAudioCLip: {fileID: 8300000, guid: 66dcf6bc360143846ae70ac34b1736b2, type: 3}
+  RockAnimClip: {fileID: 7400000, guid: 5d90ecd590ed20b4b8e5bea2e72e1a99, type: 2}
+  FrameList:
+  - {fileID: 1717469048, guid: 4e81455dd2debb348ae620dba507705c, type: 3}
+  - {fileID: -1463915499, guid: 4e81455dd2debb348ae620dba507705c, type: 3}
+  - {fileID: -413423741, guid: 4e81455dd2debb348ae620dba507705c, type: 3}

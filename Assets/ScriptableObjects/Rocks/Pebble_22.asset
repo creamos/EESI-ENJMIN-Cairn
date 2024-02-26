@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94bd6f4c886471449b07504536fe702, type: 3}
+  m_Name: Pebble_22
+  m_EditorClassIdentifier: 
+  prefabName: Harvest
+  rockDescription: 'Soft, stained hands,
+
+    Red from the ripe harvest,
+
+    Season
+    of ripe fruit'
+  rockWidth: 2
+  RockAudioCLip: {fileID: 8300000, guid: 549f8560cedce0f4e9166477457624f4, type: 3}
+  RockAnimClip: {fileID: 7400000, guid: 890d311323a9640468cd3e3c820c644b, type: 2}
+  FrameList:
+  - {fileID: 1489951977, guid: ff1879d8bed26694fbc62b25a4f3c5ae, type: 3}
+  - {fileID: 971479828, guid: ff1879d8bed26694fbc62b25a4f3c5ae, type: 3}
+  - {fileID: -1506323601, guid: ff1879d8bed26694fbc62b25a4f3c5ae, type: 3}
